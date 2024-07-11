@@ -16,12 +16,12 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Our Research",
+    title: "About AquES",
     href: "/",
-    description: "Greenhouse gases, Microplastics, Remote sensing, ...",
+    description: "...",
   },
   {
-    title: "Publications",
+    title: "Our Team",
     href: "/",
     description: "...",
   },
@@ -29,44 +29,52 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="flex justify-center w-full py-5">
+    <div className="flex justify-center w-full py-5 shadow-2xl">
       <ul className="flex justify-between w-11/12 md:w-3/4 lg:w-2/3 xl:w-[80%]">
         <li>
-          <h1 className="text-4xl font-semibold">AquES</h1>
-          <p className="text-sm font-light">Aquatic & Environmental Sciences</p>
+          <a href="/">
+            <h1 className="text-4xl font-semibold">AquES</h1>
+            <p className="text-sm font-light">
+              Aquatic & Environmental Sciences
+            </p>
+          </a>
         </li>
         <li>
           <NavigationMenu>
             <NavigationMenuList>
               {/* Item 1 */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Research</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
+                  <ul className="grid gap-4 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-4">
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md hover:bg-accent hover:text-accent-foreground"
+                          href="/research"
                         >
                           <div className="mb-2 mt-4 text-lg font-medium">
-                            shadcn/ui
+                            Our Research
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy
-                            and paste into your apps. Accessible. Customizable.
-                            Open Source.
+                            At AQUES, our research is dedicated to studying
+                            various aspects of the Anthropocene, a defining
+                            period characterized by significant human impact on
+                            the environment.
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/" title="Our Team">
+                    <ListItem href="/research/1" title="Greenhouse Gases">
                       ...
                     </ListItem>
-                    <ListItem href="/" title="...">
+                    <ListItem href="/research/2" title="Microplastics">
                       ...
                     </ListItem>
-                    <ListItem href="/" title="...">
+                    <ListItem href="/research/3" title="Remote Sensing">
+                      ...
+                    </ListItem>
+                    <ListItem href="/research/4" title="More Research Focus">
                       ...
                     </ListItem>
                   </ul>
@@ -74,7 +82,7 @@ export function Navbar() {
               </NavigationMenuItem>
               {/* Item 2 */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Research</NavigationMenuTrigger>
+                <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {components.map((component) => (
@@ -93,7 +101,7 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Resources
+                    Live Cam
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -101,11 +109,19 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    News
+                    Resources
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               {/* Item 5 */}
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    News
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              {/* Item 6 */}
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
