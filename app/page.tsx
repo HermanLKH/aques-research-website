@@ -19,16 +19,15 @@ export default function Home() {
           {/* Container for background overlay */}
           <div className="bg-black bg-opacity-50 p-10 w-full flex flex-col items-center justify-center">
             {/* Title */}
-            <h1 className="font-bold text-4xl text-center text-white mb-4">
-              Aquatic and Environmental Sciences
+            <h1 className="font-bold text-5xl text-center text-white mb-4">
+              <span className="text-cyan-300">Aqu</span>atic and{" "}
+              <span className="text-cyan-300">E</span>nvironmental
+              <span className="text-cyan-300">S</span>ciences
             </h1>
             {/* Description */}
             <p className="text-center text-white font-light text-base">
               AquES is a multidisciplinary research group dedicated to
-              investigating and resolving environmental challenges. We research
-              biogeochemical cycles, greenhouse gases, dissolved carbon,
-              environmental microbiology, remote sensing, and microplastics for
-              a sustainable future.
+              investigating and resolving environmental challenges.
             </p>
             {/* Learn More Button */}
             <Button
