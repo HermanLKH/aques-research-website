@@ -21,8 +21,8 @@ export default function Research() {
           {/* Container for background overlay */}
           <div className="bg-black bg-opacity-50 p-10 w-full flex flex-col items-center justify-center">
             {/* Title */}
-            <h1 className="font-bold text-4xl text-center text-white mb-4">
-              Our Research
+            <h1 className="font-bold text-5xl  text-center text-white mb-4">
+              Our <span className="text-cyan-300">Research</span>
             </h1>
             <p className="text-center text-white font-light">
               At AQUES, our research is dedicated to studying various aspects of
@@ -62,7 +62,7 @@ export default function Research() {
               <Separator />
               <Button
                 asChild
-                variant="ghost"
+                variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
                 <Link href="/">
@@ -87,7 +87,7 @@ export default function Research() {
               <Separator />
               <Button
                 asChild
-                variant="ghost"
+                variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
                 <Link href="/">
@@ -127,7 +127,7 @@ export default function Research() {
               <Separator />
               <Button
                 asChild
-                variant="ghost"
+                variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
                 <Link href="/">
@@ -137,6 +137,17 @@ export default function Research() {
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* View more link */}
+        <div className="flex justify-center m-20">
+          <Button
+            variant="link"
+            className="text-cyan-700 text-md animate-bounce"
+          >
+            More Research Focus
+            <HiArrowRight className="ml-2" />
+          </Button>
         </div>
       </section>
     </>
