@@ -17,19 +17,19 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "About AquES",
-    href: "/",
-    description: "...",
+    href: "/about",
+    description: "Understand more about AquES",
   },
   {
     title: "Our Team",
-    href: "/",
-    description: "...",
+    href: "/about/ourteam",
+    description: "Get in touch with the AquES team",
   },
 ];
 
 export function Navbar() {
   return (
-    <div className="flex justify-center w-full py-5 shadow-2xl">
+    <div className="flex justify-center w-full py-5 shadow-2xl bg-white sticky top-0 z-50">
       <ul className="flex justify-between w-11/12 md:w-3/4 lg:w-2/3 xl:w-[80%]">
         <li>
           <a href="/">
