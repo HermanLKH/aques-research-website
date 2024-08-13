@@ -1,0 +1,20 @@
+[
+  {
+    "id": 4953335737221120,
+    "name": "KWNP",
+    "description": "",
+    "gps": {
+      "latitude": 1.6954160449916176,
+      "longitude": 110.21964011987319
+    }
+  },
+  {
+    "id": 5862028393185280,
+    "name": "Location",
+    "description": "",
+    "gps": {
+      "latitude": 1.6895039,
+      "longitude": 110.2519226
+    }
+  }
+]
