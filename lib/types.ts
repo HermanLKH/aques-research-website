@@ -36,3 +36,33 @@ export interface SisIdListing {
   parameters: { [key: string]: string }; // Provides common names for the parameters represented elsewhere by SIS ids or keys
   units: { [key: string]: string }; // Provides common names for the units represented elsewhere by SIS ids or keys
 }
+
+
+// emailjs
+declare module 'emailjs-com' {
+  export function sendEmail(
+    serviceID: string,
+    templateID: string,
+    templateParams: Record<string, any>,
+    publicKey: string
+  ): Promise<EmailJSResponseStatus>;
+
+  export function sendEmailForm(
+    serviceID: string,
+    templateID: string,
+    form: HTMLFormElement,
+    publicKey: string
+  ): Promise<EmailJSResponseStatus>;
+
+  export interface EmailJSResponseStatus {
+    status: number;
+    text: string;
+  }
+}
+
+export interface EmailFormState {
+  full_name: string;
+  email_id: string;
+  phone_num: string;
+  message: string;
+}
