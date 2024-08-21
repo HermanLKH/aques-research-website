@@ -1,0 +1,131 @@
+{
+  "research_students": [
+    {
+      "name": "Johnathan Daniel Maxey",
+      "contact": {
+        "linkedin": "www.linkedin.com/in/johnathan-daniel-maxey-42175649/"
+      }
+    },
+    {
+      "name": "Chance Sullivan",
+      "contact": {
+        "linkedin": "www.linkedin.com/in/chance-sullivan/"
+      }
+    },
+    {
+      "name": "Clement Sim",
+      "contact": {
+        "linkedin": "www.linkedin.com/in/clement-sim-327990200/"
+      }
+    },
+    {
+      "name": "Arooj Fatima Tul Zahra",
+      "role": "MSc (Research) Candidate, BSc (Biotechnology)",
+      "position": "Vice President of Swinburne Postgraduate Research Society (2024)",
+      "institution": "Swinburne University of Technology, Sarawak Campus",
+      "location": "Room A315, 3rd Floor, Building A, Jalan Simpang Tiga, 93350 Kuching, Sarawak, Malaysia",
+      "email": [
+        "aazahra@swinburne.edu.my",
+        "aroojftz@gmail.com"
+      ],
+      "bio": "Arooj Fatima Tul Zahra is a dedicated Biotechnology graduate specializing in environmental sciences, particularly in microplastics, DNA Stable Isotope Probing (SIP), and Microbial Plastics Interaction Experiments (mPIEs). She earned her Bachelor of Science in Biotechnology from Swinburne University of Technology, Kuching. Arooj has extensive experience as a Research Assistant with the Aquatic and Environmental Sciences AQUES Research Group. She conducted detailed analyses of Maludam River water samples, including measurements of various carbon compounds and greenhouse gases. Her work also involved collecting microplastic samples from Sarawak beaches to study their environmental impact.",
+      "keywords": [
+        "DNA Stable Isotope Probing (SIP)",
+        "Microbial Plastics Interaction Experiments (mPIEs)",
+        "Bioremediation",
+        "Microplastic Degradation",
+        "Biotechnology",
+        "Environmental Sciences"
+      ]
+    },
+    {
+      "name": "Jonathan Lee Wen Han",
+      "role": "MSc (Research) Candidate, BSc (Biotechnology)",
+      "institution": "Swinburne University of Technology, Sarawak Campus",
+      "bio": "Jonathan’s research focuses on biohydrogen production using green microalgae, aiming to contribute to the viable upscaling or industrial scale of biohydrogen production, which is currently still in the research phase. He also has experience in agricultural science research related to biochar production from sago barks during his Final Year Research Project.",
+      "keywords": [
+        "Biohydrogen Production",
+        "Green Microalgae",
+        "Bioprocessing",
+        "Biochar Production",
+        "Agricultural Science"
+      ],
+      "career_highlights": [
+        {
+          "title": "MSc (Research)",
+          "institution": "Swinburne University of Technology, Sarawak",
+          "year": 2023
+        },
+        {
+          "title": "BSc Biotechnology",
+          "institution": "Swinburne University of Technology, Sarawak",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "name": "Clarence Tay",
+      "role": "MSc (Research) Candidate, BSc (Biotechnology)",
+      "institution": "Swinburne University of Technology, Sarawak Campus",
+      "bio": "Clarence’s research focuses on microplastics, aiming to develop a clearer picture of microplastic pollution in Southeast Asian coastal regions. His expertise includes microscopic techniques such as fluorescence microscopy and developing predictive models. He is also involved in community outreach programs to raise awareness of plastic pollution.",
+      "keywords": [
+        "Microplastics",
+        "Fluorescence Microscopy",
+        "Predictive Models",
+        "Plastic Pollution",
+        "Environmental Sciences"
+      ],
+      "career_highlights": [
+        {
+          "title": "Master of Science (Research)",
+          "institution": "Swinburne University of Technology, Sarawak Campus",
+          "year": "Current"
+        },
+        {
+          "title": "Bachelor of Science (Biotechnology)",
+          "institution": "Swinburne University of Technology, Sarawak Campus",
+          "year": 2020
+        }
+      ],
+      "publications": [
+        {
+          "authors": "Huda, F. R., Richard, F. S., Rahman, I., Moradi, S., Hua, C. T. Y., Wanwen, C. A. S., Fong, T. L., Mujahid, A., & Müller, M.",
+          "year": 2023,
+          "title": "Comparison of learning models to predict LDPE, PET, and ABS concentrations in beach sediment based on spectral reflectance.",
+          "journal": "Scientific Reports",
+          "volume": 13,
+          "issue": 1,
+          "pages": "1–10",
+          "doi": "10.1038/s41598-023-33207-x",
+          "link": "https://doi.org/10.1038/s41598-023-33207-x"
+        }
+      ],
+      "linkedin": "www.linkedin.com/in/clarence-yuen-hua-tay-a7845b304"
+    },
+    {
+      "name": "Alwi Nurmadi Widyananda",
+      "role": "MSc (Research) Candidate",
+      "institution": "Swinburne University of Technology, Sarawak Campus",
+      "location": "Q5B, 93350, Kuching, Sarawak, Malaysia",
+      "email": "wanurmadi@swinburne.edu.my",
+      "bio": "Alwi’s research focuses on using hyperspectral imaging for plastic detection in aquatic environments. He completed his Bachelor of Science (Biotechnology) and is now pioneering research with HydraSpectra sensors for potential expansion of water monitoring capabilities.",
+      "keywords": [
+        "Remote Sensing",
+        "Hyperspectral Imaging",
+        "Plastics",
+        "Science Communication"
+      ],
+      "career_highlights": [
+        {
+          "title": "Bachelor of Science (Biotechnology)",
+          "institution": "Swinburne University of Technology, Sarawak",
+          "year": 2020
+        }
+      ],
+      "linkedin": "www.linkedin.com/in/alwiwidyananda"
+    },
+    {
+        "name": "Christabel Sim"
+    }
+  ]
+}
