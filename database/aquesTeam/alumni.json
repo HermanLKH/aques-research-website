@@ -1,139 +1,137 @@
-{
-  "alumni": [
-    {
-      "name": "Onn May Ling",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/onn-may-ling-41502a3a/"
-      }
-    },
-    {
-      "name": "Felicity Kuek Wen Ik",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/felicity-kuek-22645960/"
-      }
-    },
-    {
-      "name": "Shirley Bong Wuan Lii "
-    },
-    {
-      "name": "Juliana Ho Sing Fang",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/julia-ho-ab8432139/"
-      }
-    },
-    {
-      "name": "Ng Chiew Tyiin"
-    },
-    {
-      "name": "Natasha Nur Amarina Bt Mohd. Kaie"
-    },
-    {
-      "name": "Samson Lee Tze Hung"
-    },
-    {
-      "name": "Lew Yao Long",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/richard-lew-yaolong/"
-      }
-    },
-    {
-      "name": "Angelica Fiona Tan"
-    },
-    {
-      "name": "Kho Ik Hui"
-    },
-    {
-      "name": "Revadi Devi Thyartan",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/revadithyartan1607/"
-      }
-    },
-    {
-      "name": "Fiona Chung Yi Li",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/fiona-chung-yi-li-69b287181/"
-      }
-    },
-    {
-      "name": "Dr Noreha Binti Mahidi"
-    },
-    {
-      "name": "Dr Ang Chung Huap",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/dr-ang-chung-huap-b7a109272/"
-      }
-    },
-    {
-      "name": "Dr Nastassia Denis"
-    },
-    {
-      "name": "Dr Jessica Song Xiaophing",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/jessica-song-53122440/"
-      }
-    },
-    {
-      "name": "Dr Edwin Sia Sien Aun",
-      "contact":{
-        "linkedin": "www.linkedin.com/in/edwinsiasienaun/"
-      }
-    },
-    {
-      "name": "Dr Faddrine Holt Ajon Jang",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/faddrine-jang-94565b203/"
-      }
-    },
-    {
-      "name": "Dr Sim Chun Hock"
-    },
-    {
-      "name": "Ishraq Rahman",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/ishraq-rahman-04096b15a/"
-      }
-    },
-    {
-      "name": "Florina Stephanie Richard",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/florina-richard/"
-      }
-    },
-    {
-      "name": "Samantha Ambie",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/samantha-ambie-63765422a/"
-      }
-    },
-    {
-      "name": "Elsa Cordelia",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/elsacordelia/"
-      }
-    },
-    {
-      "name": "Syamil Sahar",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/syamilsahar/"
-      }
-    },
-    {
-      "name": "Julia Wee",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/julia-wee-465aa539/"
-      }
-    },
-    {
-      "name": "Eric Lau Ngie Hao",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/ngie-hao-eric-lau-2a32021ab/"
-      }
-    },
-    {
-      "name": "Arnold Fidelis Ling",
-      "contact": {
-        "linkedin": "www.linkedin.com/in/arnold-fidelis-776ab1121/"
-      }
+[
+  {
+    "name": "Onn May Ling",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/onn-may-ling-41502a3a/"
     }
-  ]
-}
+  },
+  {
+    "name": "Felicity Kuek Wen Ik",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/felicity-kuek-22645960/"
+    }
+  },
+  {
+    "name": "Shirley Bong Wuan Lii "
+  },
+  {
+    "name": "Juliana Ho Sing Fang",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/julia-ho-ab8432139/"
+    }
+  },
+  {
+    "name": "Ng Chiew Tyiin"
+  },
+  {
+    "name": "Natasha Nur Amarina Bt Mohd. Kaie"
+  },
+  {
+    "name": "Samson Lee Tze Hung"
+  },
+  {
+    "name": "Lew Yao Long",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/richard-lew-yaolong/"
+    }
+  },
+  {
+    "name": "Angelica Fiona Tan"
+  },
+  {
+    "name": "Kho Ik Hui"
+  },
+  {
+    "name": "Revadi Devi Thyartan",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/revadithyartan1607/"
+    }
+  },
+  {
+    "name": "Fiona Chung Yi Li",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/fiona-chung-yi-li-69b287181/"
+    }
+  },
+  {
+    "name": "Dr Noreha Binti Mahidi"
+  },
+  {
+    "name": "Dr Ang Chung Huap",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/dr-ang-chung-huap-b7a109272/"
+    }
+  },
+  {
+    "name": "Dr Nastassia Denis"
+  },
+  {
+    "name": "Dr Jessica Song Xiaophing",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/jessica-song-53122440/"
+    }
+  },
+  {
+    "name": "Dr Edwin Sia Sien Aun",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/edwinsiasienaun/"
+    }
+  },
+  {
+    "name": "Dr Faddrine Holt Ajon Jang",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/faddrine-jang-94565b203/"
+    }
+  },
+  {
+    "name": "Dr Sim Chun Hock"
+  },
+  {
+    "name": "Ishraq Rahman",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/ishraq-rahman-04096b15a/"
+    }
+  },
+  {
+    "name": "Florina Stephanie Richard",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/florina-richard/"
+    }
+  },
+  {
+    "name": "Samantha Ambie",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/samantha-ambie-63765422a/"
+    }
+  },
+  {
+    "name": "Elsa Cordelia",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/elsacordelia/"
+    }
+  },
+  {
+    "name": "Syamil Sahar",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/syamilsahar/"
+    }
+  },
+  {
+    "name": "Julia Wee",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/julia-wee-465aa539/"
+    }
+  },
+  {
+    "name": "Eric Lau Ngie Hao",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/ngie-hao-eric-lau-2a32021ab/"
+    }
+  },
+  {
+    "name": "Arnold Fidelis Ling",
+    "contact": {
+      "linkedin": "www.linkedin.com/in/arnold-fidelis-776ab1121/"
+    }
+  }
+]

@@ -1,10 +1,51 @@
-import { FaLinkedin } from "react-icons/fa";
+import { FaCheckCircle, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import fs, { readFileSync } from "fs";
+import path from "path";
+import { Profile } from "@/lib/types";
 
 export default function OurTeam() {
+  // Path to the profile data
+  const founderFilePath = path.join(
+    process.cwd(),
+    "database/aquesTeam",
+    "founders.json"
+  );
+  const sResearcherFilePath = path.join(
+    process.cwd(),
+    "database/aquesTeam",
+    "seniorResearchers.json"
+  );
+  const alumniFilePath = path.join(
+    process.cwd(),
+    "database/aquesTeam",
+    "alumni.json"
+  );
+  const rStudentFilePath = path.join(
+    process.cwd(),
+    "database/aquesTeam",
+    "researchStudents.json"
+  );
+
+  // Load founders data from the json files
+  const founderData = fs.readFileSync(founderFilePath, "utf-8");
+  const founders: Profile[] = JSON.parse(founderData);
+
+  // Load founders data from the json files
+  const sResearcherData = fs.readFileSync(sResearcherFilePath, "utf-8");
+  const sResearchers: Profile[] = JSON.parse(sResearcherData);
+
+  // Load alumni data from the json files
+  const alumniData = fs.readFileSync(alumniFilePath, "utf-8");
+  const alumni: Profile[] = JSON.parse(alumniData);
+
+  // Load research students data from the json files
+  const rStudentData = fs.readFileSync(rStudentFilePath, "utf-8");
+  const rStudents: Profile[] = JSON.parse(rStudentData);
+
   return (
     <>
       {/* Section 1: Title & description */}
@@ -29,57 +70,36 @@ export default function OurTeam() {
             Founders
           </h2>
 
-          {/* Card 1 */}
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">Founder</h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Professor Dr Moritz Müller
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
+          {founders.map((founder) => (
+            // Founder Profile Card
+            <div
+              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative"
+              key={founder.name}
+            >
+              <Image
+                src={founder.profile_picture || "/images/elonmusk.jpg"}
+                width={500}
+                height={200}
+                alt="Picture of Elon Musk"
+                className="rounded-t-lg w-full h-[200px] object-cover"
+              />
+              <div className="p-5">
+                <h6 className="text-sm text-cyan-600 font-normal">Founder</h6>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {founder.name}
+                </h5>
+                <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
+                  minima atque culpa fugit quo aliquam quis eaque debitis
+                  quaerat porro repellat quas.
+                </p>
+                <Link href={founder.contact.linkedin}>
+                  <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
+                </Link>
+              </div>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">Founder</h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Associate Professor Dr Aazani Mujahid
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -90,117 +110,56 @@ export default function OurTeam() {
             Senior Researchers
           </h2>
 
-          {/* Card 1 */}
-          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">
-                Senior Researcher
-              </h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Ting Lik Fong
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
-            </div>
-          </div>
+          {sResearchers.map((sResearcher) => {
+            const bioSnippet = sResearcher?.bio
+              ? `${sResearcher.bio.slice(0, 200)}${
+                  sResearcher.bio.length > 200 ? " ..." : ""
+                }`
+              : "";
 
-          {/* Card 2 */}
-          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">
-                Senior Researcher
-              </h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Ts Dr Miko Chang May Lee
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
-            </div>
-          </div>
+            return (
+              <div
+                key={sResearcher.name}
+                className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative"
+              >
+                <Image
+                  src={sResearcher?.profile_picture || "/images/elonmusk.jpg"}
+                  width={500}
+                  height={200}
+                  alt={`Profile Picture of ${sResearcher.name}`}
+                  className="rounded-t-lg w-full h-[200px] object-cover"
+                />
+                <div className="p-5">
+                  <h6 className="text-sm text-cyan-600 font-normal">
+                    Senior Researcher
+                  </h6>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {sResearcher.name}
+                  </h5>
 
-          {/* Card 3 */}
-          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">
-                Senior Researcher
-              </h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Dr Wong Changi
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 m-4 relative">
-            <Image
-              src="/images/elonmusk.jpg"
-              width={500}
-              height={200}
-              alt="Picture of Elon Musk"
-              className="rounded-t-lg w-full h-[200px] object-cover"
-            />
-            <div className="p-5">
-              <h6 className="text-sm text-cyan-600 font-normal">
-                Senior Researcher
-              </h6>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Dr Jenny Choo
-              </h5>
-              <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis obcaecati cupiditate quia eum quod, ea dolorum optio
-                minima atque culpa fugit quo aliquam quis eaque debitis quaerat
-                porro repellat quas.
-              </p>
-              <Link href="">
-                <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
-              </Link>
-            </div>
-          </div>
+                  <h6 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Area of Interest
+                  </h6>
+                  <ul className="mb-6 font-normal text-gray-700 dark:text-gray-400 list-disc list-inside space-y-2">
+                    {sResearcher.area_of_interest?.map((interest, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-cyan-600 mr-2">
+                          <FaCheckCircle />
+                        </span>
+                        {interest}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">
+                    {bioSnippet}
+                  </p> */}
+                  <Link href={sResearcher?.contact?.linkedin || ""}>
+                    <FaLinkedin className="absolute bottom-5 left-5 text-3xl hover:-translate-y-1 ease-in duration-100 cursor-pointer" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -225,187 +184,26 @@ export default function OurTeam() {
           {/* Research Students */}
           <TabsContent value="researchstudents">
             <ul className="grid grid-cols-3 gap-4">
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Johnathan Daniel Maxey</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Clarence Tay</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Arooj Zahra</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Christabel Sim</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Chance Sullivan</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Clement Sim</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Jonathan Lee</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Alwi Widyananda</Link>
-                </Button>
-              </li>
+              {rStudents.map((rStudent) => (
+                <li key={rStudent.name}>
+                  <Button asChild variant="link" className="text-md">
+                    <Link href="/">{rStudent.name}</Link>
+                  </Button>
+                </li>
+              ))}
             </ul>
           </TabsContent>
 
           {/* Alumni */}
           <TabsContent value="alumni">
             <ul className="grid grid-cols-3 gap-4">
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Onn May Ling</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Natasha Nur Amarina Bt Mohd. Kaie</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Revadi Devi Thyartan</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Jessica Song Xiaophing</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Sim Chun Hock</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Eric Lau Ngie Hao</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Felicity Kuek Wen Ik</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Samson Lee Tze Hung</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Fiona Chung Yi Li</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Edwin Sia Sien Aun</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Samantha Ambie</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Arnold Fidelis Ling</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Shirley Bong Wuan Lii</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Lew Yao Long</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Noreha Binti Mahidi</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Faddrine Holt Ajon Jang</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Elsa Cordelia</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Juliana Ho Sing Fang</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Angelica Fiona Tan</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Ang Chung Huap</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Ishraq Rahman</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Syamil Sahar</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Ng Chiew Tyiin</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Kho Ik Hui</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Dr Nastassia Denis</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Florina Stephanie Richard</Link>
-                </Button>
-              </li>
-              <li>
-                <Button asChild variant="link" className="text-md">
-                  <Link href="/">Julia Wee</Link>
-                </Button>
-              </li>
+              {alumni.map((alumnus) => (
+                <li key={alumnus.name}>
+                  <Button asChild variant="link" className="text-md">
+                    <Link href="/">{alumnus.name}</Link>
+                  </Button>
+                </li>
+              ))}
             </ul>
           </TabsContent>
         </Tabs>

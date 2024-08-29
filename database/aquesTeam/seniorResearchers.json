@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Ting Lik Fong",
+    "profile_picture": "/images/Ting Lik Fong/profile.jpg"
+  },
+  {
+    "name": "Ts Dr Miko Chang May Lee",
+    "profile_picture": "/images/Ts Dr Miko Chang May Lee/profile.jpg",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/mikochangmaylee/"
+    }
+  },
+  {
+    "name": "Dr Wong Changi",
+    "profile_picture": "/images/Dr Wong Changi/profile.jpg",
+    "role": "Postdoctoral Researcher",
+    "institution": "Swinburne University of Technology Sarawak Campus",
+    "location": "Jalan Simpang Tiga 93350 Kuching, Sarawak, Malaysia",
+    "contact": {
+      "email": "cgwong@swinburne.edu.my",
+      "linkedin": "https://www.linkedin.com/in/changi-wong-05590a204",
+      "googlescholar": "https://scholar.google.com/citations?user=OgAndckAAAAJ&hl=en&oi=sra"
+    },
+    "area_of_interest": [
+      "Endophytes",
+      "Natural Products",
+      "Plant Tissue Culture",
+      "Microplastic",
+      "Biogeochemistry",
+      "Macro-Photography",
+      "Nepenthes Plant Breeding"
+    ],
+    "bio": "Changi’s research career has concentrated on environmental biogeochemistry and microplastics, aiming to deepen the understanding of microplastic pollution in Southeast Asian coastal environments and its solutions. His work extensively involves studying biogeochemical cycles and the impacts of microplastics on these systems. He holds a PhD in Biology and continues his postdoctoral research at Swinburne University of Technology Sarawak Campus, where he also teaches part-time. His expertise includes microbiology, molecular biology techniques such as DNA extraction and PCR, and plant tissue culture. Changi has engaged in community outreach programs aimed at raising awareness and reducing plastic waste through recycling and upcycling initiatives. His research and educational efforts underscore his commitment to tackling environmental issues, especially related to plastic pollution and its broader ecological impacts.",
+    "career_highlights": [
+      {
+        "title": "Postdoctoral Researcher",
+        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "duration": "2021 – Present",
+        "description": "Focus on biogeochemical analysis of riverine water and research on microplastics in Southeast Asia, along with facilitating Nile Red microscopy training."
+      },
+      {
+        "title": "Research Assistant",
+        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "duration": "March 2020 – December 2021",
+        "description": "Involved in a microplastic research project under Professor Moritz Müller."
+      },
+      {
+        "title": "Self-Volunteer Works",
+        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "duration": "December 2013 – 2020",
+        "description": "Led plant tissue culture projects and community engagement initiatives on plastic waste recycling and upcycling."
+      },
+      {
+        "title": "PhD in Biology",
+        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "duration": "2016 – 2021",
+        "description": "Dissertation focused on eco-metabolomic studies on Nepenthes pitcher plants."
+      }
+    ],
+    "publications": [
+      {
+        "title": "Increased transfer of trace metals and Vibrio sp. from biodegradable microplastics to catfish Clarias gariepinus.",
+        "authors": "Jang, F. H., Wong, C., Choo, J., Sia, E. S. A., Mujahid, A., & Müller, M.",
+        "year": 2022,
+        "journal": "Environmental Pollution",
+        "volume": 298,
+        "doi": "10.1016/j.envpol.2022.118850",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0269749122000641?via%3Dihub"
+      },
+      {
+        "title": "Protocol for Screening Endophytic Fungi Against Heavy Metals.",
+        "authors": "Choo, J., Wong, C., & Müller, M.",
+        "year": 2022,
+        "book": "Mycoremediation Protocols",
+        "pages": "45-53",
+        "publisher": "Springer US",
+        "location": "New York, NY",
+        "link": "https://link.springer.com/protocol/10.1007/978-1-0716-2006-9_5"
+      },
+      {
+        "title": "A comparative UHPLC-Q/TOF–MS-based eco-metabolomics approach reveals temperature adaptation of four Nepenthes species.",
+        "authors": "Wong, C., Ling, Y. S., Wee, J. L. S., Mujahid, A., & Müller, M.",
+        "year": 2020,
+        "journal": "Scientific Reports",
+        "volume": 10,
+        "issue": 1,
+        "pages": 21861,
+        "link": "https://www.nature.com/articles/s41598-020-78873-3"
+      }
+    ]
+  },
+  {
+    "name": "Dr. Jenny Choo",
+    "profile_picture": "/images/Dr. Jenny Choo/profile.jpg",
+    "role": "Joint Postdoctoral Researcher (CSIRO – Plymouth Marine Laboratory)",
+    "institution": "Swinburne University of Technology, Sarawak campus",
+    "location": "Jalan Simpang Tiga, 93350, Kuching, Sarawak, Malaysia",
+    "contact": {
+      "email": "jccy89@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/jenny-choo-50a697286",
+      "researchgate": "https://www.researchgate.net/profile/Jenny-Choo"
+    },
+    "area_of_interest": [
+      "Remote Sensing",
+      "Satellite",
+      "Biogeochemistry",
+      "Aquatic",
+      "Mangrove"
+    ],
+    "bio": "Jenny’s research has spanned from microbiology-based experiments to environmental science activities. Her recent research focuses on applying digital-based solutions, such as the application of the Open Data Cube (ODC) platform, to study the dynamical changes of water and land through satellite observations and analysis. Collaborating with experts from CSIRO, Australia, she gains experience in utilizing earth observation tools to process and analyze large volumes of satellite datasets, aimed at better management of water and land changes. Jenny is also involved in the Aquawatch mission by CSIRO to establish a ground-to-space water quality monitoring system in Sarawak. Her computing and programming skills include Python, R language, and machine learning approaches.",
+    "career_highlights": [
+      {
+        "title": "South and Southeast Asian Young Talents China’s Science, Technology and Innovation (STI) trip",
+        "location": "Shanghai and Kunming, China",
+        "year": 2023
+      },
+      {
+        "title": "Research Attachment at Commonwealth Scientific and Industrial Research Organisation (CSIRO)",
+        "location": "Canberra, Australia",
+        "year": 2022
+      },
+      {
+        "title": "The Mayor Scholarship: The Silk Road Project of Chongqing College of Electronic Engineering – Yalong (Malaysia): Teachers International Training Program",
+        "location": "Chongqing, China",
+        "year": 2019
+      },
+      {
+        "title": "Swinburne Research Studentship",
+        "year": 2019
+      }
+    ],
+    "publications": [
+      {
+        "title": "Spatial and temporal dynamics of suspended sediment concentrations in coastal waters of the South China Sea, off Sarawak, Borneo: ocean colour remote sensing observations and analysis.",
+        "authors": "Choo, J., Cherukuru, N., Lehmann, E., Paget, M., Mujahid, A., Martin, P., & Müller, M.",
+        "year": 2022,
+        "journal": "Biogeosciences",
+        "volume": 19,
+        "pages": "5837–5857",
+        "doi": "10.5194/bg-19-5837-2022",
+        "link": "https://bg.copernicus.org/articles/19/5837/2022/"
+      },
+      {
+        "title": "Protocol for Screening Endophytic Fungi Against Heavy Metals.",
+        "authors": "Choo, J., Wong, C., Müller, M.",
+        "year": 2022,
+        "book": "Mycoremediation Protocols",
+        "publisher": "Springer Protocols Handbooks, Humana, New York, NY",
+        "doi": "10.1007/978-1-0716-2006-9_5",
+        "link": "https://link.springer.com/protocol/10.1007/978-1-0716-2006-9_5"
+      },
+      {
+        "title": "Biosorption and proteomic analysis of an encapsulated endophytic heavy-metal resistant Pestalotiopsis sp.",
+        "authors": "Choo, J., Norasfaliza, R., Al-Obaidi, J. R., Aazani, M., Ting, L., & Moritz, M.",
+        "year": 2019,
+        "journal": "Malaysian Journal of Microbiology",
+        "volume": 15,
+        "issue": 7,
+        "pages": "505-517",
+        "link": "https://mjm.usm.my/uploads/issues/1554/MJM-18-0037_COLOUR.pdf"
+      }
+    ]
+  }
+]

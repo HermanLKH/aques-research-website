@@ -37,9 +37,50 @@ export interface SisIdListing {
   units: { [key: string]: string }; // Provides common names for the units represented elsewhere by SIS ids or keys
 }
 
+// researcher profile
+export interface Profile {
+  name: string;
+  profile_picture: string;
+  role: string;
+  contact: Contact;
+  institution: string;
+  location: string;
+  area_of_interest: string[];
+  bio: string;
+  careerHighlights: CareerHighlight[];
+}
+
+export interface CareerHighlight {
+  title: string;
+  institution: string;
+  duration: string;
+  description: string;
+}
+
+export interface Contact {
+  email: string;
+  linkedin: string;
+  googlescholar: string;
+}
+
+export interface Publication {
+  title: string;
+  authors: string;
+  year: number;
+
+  journal: string;
+  book: string;
+
+  volume: number;
+  pages: number;
+
+  issue: number;
+  doi: string;
+  link: string;
+}
 
 // emailjs
-declare module 'emailjs-com' {
+declare module "emailjs-com" {
   export function sendEmail(
     serviceID: string,
     templateID: string,
