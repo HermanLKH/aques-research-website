@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Professor Dr Moritz Müller",
+    "profile_picture": "/images/Professor Dr Moritz Müller/profile.jpg",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/moritz-m%C3%BCller-1b105723/"
+    }
+  },
+  {
+    "name": "Associate Professor Dr Aazani Mujahid",
+    "profile_picture": "/images/Associate Professor Dr Aazani Mujahid/profile.jpg",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/aazani-mujahid-7309771a/"
+    }
+  }
+]
