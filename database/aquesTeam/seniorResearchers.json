@@ -1,25 +1,33 @@
 [
   {
+    "id": "sr0001",
     "name": "Ting Lik Fong",
-    "profile_picture": "/images/Ting Lik Fong/profile.jpg"
-  },
-  {
-    "name": "Ts Dr Miko Chang May Lee",
-    "profile_picture": "/images/Ts Dr Miko Chang May Lee/profile.jpg",
+    "profile_picture": "/images/sr0001/profile.jpg",
     "contact": {
-      "linkedin": "https://www.linkedin.com/in/mikochangmaylee/"
+      "research": "https://scholar.google.com/citations?user=wapGI4AAAAAJ&hl=en"
     }
   },
   {
+    "id": "sr0002",
+    "name": "Ts Dr Miko Chang May Lee",
+    "profile_picture": "/images/sr0002/profile.jpg",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/mikochangmaylee/",
+      "research": "https://scholar.google.com.sg/citations?user=aIX92S0AAAAJ&hl=en"
+    },
+    "bio": "Miko Chang joined Swinburne University of Technology Sarawak Campus (SUTS) in 2021 as a senior lecturer in the field of data science and advanced analytics. Miko received her PhD from NUS Graduate School for Integrative Sciences and Engineering in 2019 and a Bachelor of Engineering (Biomedical Imaging) with First Class Honours from National University of Singapore (NUS) in 2014. She has teaching experience in NUS for CS1010E Programming Methodology and BN3201 Bio-mechanics. Prior to joining SUTS, Miko Chang has worked with numerous multi-national companies including MSD Singapore, Country Garden (China), HILTI (Europe) and a Sarawakian company NAIM Holdings. During her career with HILTI Group as a Global IT Data Scientist, she was involved in a wide range of industrial data science projects including customer engagement analysis, financial sales forecasting, logistics demand forecasting and ad-hoc data science tasks. She helped setting-up the Data Science and Analytics Community and was the scrum master for the data science team who advocated agile methodology in the organisation. Combining both her academic and industrial experience, her current research focuses on data science and analytics, data-driven applications for digital economy, data-centric AI and data governance."
+  },
+  {
+    "id": "sr0003",
     "name": "Dr Wong Changi",
-    "profile_picture": "/images/Dr Wong Changi/profile.jpg",
+    "profile_picture": "/images/sr0003/profile.jpg",
     "role": "Postdoctoral Researcher",
     "institution": "Swinburne University of Technology Sarawak Campus",
     "location": "Jalan Simpang Tiga 93350 Kuching, Sarawak, Malaysia",
     "contact": {
       "email": "cgwong@swinburne.edu.my",
       "linkedin": "https://www.linkedin.com/in/changi-wong-05590a204",
-      "googlescholar": "https://scholar.google.com/citations?user=OgAndckAAAAJ&hl=en&oi=sra"
+      "research": "https://scholar.google.com/citations?user=OgAndckAAAAJ&hl=en&oi=sra"
     },
     "area_of_interest": [
       "Endophytes",
@@ -30,29 +38,29 @@
       "Macro-Photography",
       "Nepenthes Plant Breeding"
     ],
-    "bio": "Changi’s research career has concentrated on environmental biogeochemistry and microplastics, aiming to deepen the understanding of microplastic pollution in Southeast Asian coastal environments and its solutions. His work extensively involves studying biogeochemical cycles and the impacts of microplastics on these systems. He holds a PhD in Biology and continues his postdoctoral research at Swinburne University of Technology Sarawak Campus, where he also teaches part-time. His expertise includes microbiology, molecular biology techniques such as DNA extraction and PCR, and plant tissue culture. Changi has engaged in community outreach programs aimed at raising awareness and reducing plastic waste through recycling and upcycling initiatives. His research and educational efforts underscore his commitment to tackling environmental issues, especially related to plastic pollution and its broader ecological impacts.",
+    "bio": "Changi’s research career has concentrated on environmental biogeochemistry and microplastics. He aims to deepen the understanding of microplastic pollution in Southeast Asian coastal environments and its solutions. His work extensively involves studying biogeochemical cycles and the impacts of microplastics on these systems. He holds a PhD in Biology and continues his postdoctoral research at Swinburne University of Technology Sarawak Campus, where he also teaches part-time. His expertise includes microbiology, molecular biology techniques such as DNA extraction and PCR, and plant tissue culture. Changi has engaged in community outreach programs aimed at raising awareness and reducing plastic waste through recycling and upcycling initiatives. His research and educational efforts underscore his commitment to tackling environmental issues, especially related to plastic pollution and its broader ecological impacts.",
     "career_highlights": [
       {
         "title": "Postdoctoral Researcher",
-        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "location": "Swinburne University of Technology Sarawak Campus, Malaysia",
         "duration": "2021 – Present",
         "description": "Focus on biogeochemical analysis of riverine water and research on microplastics in Southeast Asia, along with facilitating Nile Red microscopy training."
       },
       {
         "title": "Research Assistant",
-        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "location": "Swinburne University of Technology Sarawak Campus, Malaysia",
         "duration": "March 2020 – December 2021",
         "description": "Involved in a microplastic research project under Professor Moritz Müller."
       },
       {
         "title": "Self-Volunteer Works",
-        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "location": "Swinburne University of Technology Sarawak Campus, Malaysia",
         "duration": "December 2013 – 2020",
         "description": "Led plant tissue culture projects and community engagement initiatives on plastic waste recycling and upcycling."
       },
       {
         "title": "PhD in Biology",
-        "institution": "Swinburne University of Technology Sarawak Campus, Malaysia",
+        "location": "Swinburne University of Technology Sarawak Campus, Malaysia",
         "duration": "2016 – 2021",
         "description": "Dissertation focused on eco-metabolomic studies on Nepenthes pitcher plants."
       }
@@ -90,15 +98,16 @@
     ]
   },
   {
+    "id": "sr0004",
     "name": "Dr. Jenny Choo",
-    "profile_picture": "/images/Dr. Jenny Choo/profile.jpg",
+    "profile_picture": "/images/sr0004/profile.jpg",
     "role": "Joint Postdoctoral Researcher (CSIRO – Plymouth Marine Laboratory)",
     "institution": "Swinburne University of Technology, Sarawak campus",
     "location": "Jalan Simpang Tiga, 93350, Kuching, Sarawak, Malaysia",
     "contact": {
       "email": "jccy89@gmail.com",
       "linkedin": "https://www.linkedin.com/in/jenny-choo-50a697286",
-      "researchgate": "https://www.researchgate.net/profile/Jenny-Choo"
+      "research": "https://www.researchgate.net/profile/Jenny-Choo"
     },
     "area_of_interest": [
       "Remote Sensing",
@@ -112,21 +121,21 @@
       {
         "title": "South and Southeast Asian Young Talents China’s Science, Technology and Innovation (STI) trip",
         "location": "Shanghai and Kunming, China",
-        "year": 2023
+        "duration": 2023
       },
       {
         "title": "Research Attachment at Commonwealth Scientific and Industrial Research Organisation (CSIRO)",
         "location": "Canberra, Australia",
-        "year": 2022
+        "duration": 2022
       },
       {
         "title": "The Mayor Scholarship: The Silk Road Project of Chongqing College of Electronic Engineering – Yalong (Malaysia): Teachers International Training Program",
         "location": "Chongqing, China",
-        "year": 2019
+        "duration": 2019
       },
       {
         "title": "Swinburne Research Studentship",
-        "year": 2019
+        "duration": 2019
       }
     ],
     "publications": [

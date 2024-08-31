@@ -39,6 +39,7 @@ export interface SisIdListing {
 
 // researcher profile
 export interface Profile {
+  id: string;
   name: string;
   profile_picture: string;
   role: string;
@@ -47,12 +48,13 @@ export interface Profile {
   location: string;
   area_of_interest: string[];
   bio: string;
-  careerHighlights: CareerHighlight[];
+  career_highlights: CareerHighlight[];
+  publications: Publication[];
 }
 
 export interface CareerHighlight {
   title: string;
-  institution: string;
+  location: string;
   duration: string;
   description: string;
 }
@@ -60,7 +62,7 @@ export interface CareerHighlight {
 export interface Contact {
   email: string;
   linkedin: string;
-  googlescholar: string;
+  research: string;
 }
 
 export interface Publication {
