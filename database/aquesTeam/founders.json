@@ -1,16 +1,28 @@
 [
   {
+    "id": "fdr0001",
     "name": "Professor Dr Moritz Müller",
-    "profile_picture": "/images/Professor Dr Moritz Müller/profile.jpg",
+    "profile_picture": "/images/fdr0001/profile.jpg",
     "contact": {
-      "linkedin": "https://www.linkedin.com/in/moritz-m%C3%BCller-1b105723/"
-    }
+      "linkedin": "https://www.linkedin.com/in/moritz-m%C3%BCller-1b105723/",
+      "research": "https://scholar.google.com.my/citations?user=taXOvK8AAAAJ&hl=en"
+    },
+    "bio": "Upon graduation at the National Oceanography Centre in Southampton, UK, Moritz accepted a lectureship position at Swinburne Sarawak where he initially established the BSc (Biotechnology) program and later set up the Aquatic and Environmental Sciences (AquES) Research Group. He has been teaching ten years in the undergraduate program and supervised over 20 MSc and PhD students to completion. Moritz’s research focuses on biogeochemical cycles in the Anthropocene, mainly greenhouse gases, dissolved organic and inorganic carbon, environmental microbiology, trace metals, and microplastics. His collaborative work has been published in Nature Communications, as well as other A* journals such as Nature Scientific Reports, Environmental Pollution, Global Change Biology, and Science Advances. Over the past five years, Moritz secured national and international grants totalling over six million AUD as Principal Investigator or Co-Investigator. Moritz has represented Malaysia at international meetings such as the multilateral Coral Triangle Initiative or the IMBeR Continental Margins Working Group, a core project of the Scientific Committee on Oceanic Research (SCOR) and Future Earth. He is a founding member of the Malaysian Microplastics Network and has been appointed the Sarawak node of the Malaysian Society of Marine Sciences.",
+    "area_of_interest": [
+      "Greenhouse gases",
+      "Carbon cycle and Blue Carbon",
+      "Environmental microbiology",
+      "Microplastics",
+      "Remote sensing"
+    ]
   },
   {
+    "id": "fdr0002",
     "name": "Associate Professor Dr Aazani Mujahid",
-    "profile_picture": "/images/Associate Professor Dr Aazani Mujahid/profile.jpg",
+    "profile_picture": "/images/fdr0002/profile.jpg",
     "contact": {
-      "linkedin": "https://www.linkedin.com/in/aazani-mujahid-7309771a/"
+      "linkedin": "https://www.linkedin.com/in/aazani-mujahid-7309771a/",
+      "research": "https://scholar.google.com.my/citations?user=q2Sg9akAAAAJ&hl=en"
     }
   }
 ]
