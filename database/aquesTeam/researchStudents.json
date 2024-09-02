@@ -23,7 +23,10 @@
     "position": "Vice President of Swinburne Postgraduate Research Society (2024)",
     "institution": "Swinburne University of Technology, Sarawak Campus",
     "location": "Room A315, 3rd Floor, Building A, Jalan Simpang Tiga, 93350 Kuching, Sarawak, Malaysia",
-    "email": ["aazahra@swinburne.edu.my", "aroojftz@gmail.com"],
+    "email": [
+      "aazahra@swinburne.edu.my",
+      "aroojftz@gmail.com"
+    ],
     "bio": "Arooj Fatima Tul Zahra is a dedicated Biotechnology graduate specializing in environmental sciences, particularly in microplastics, DNA Stable Isotope Probing (SIP), and Microbial Plastics Interaction Experiments (mPIEs). She earned her Bachelor of Science in Biotechnology from Swinburne University of Technology, Kuching. Arooj has extensive experience as a Research Assistant with the Aquatic and Environmental Sciences AQUES Research Group. She conducted detailed analyses of Maludam River water samples, including measurements of various carbon compounds and greenhouse gases. Her work also involved collecting microplastic samples from Sarawak beaches to study their environmental impact.",
     "keywords": [
       "DNA Stable Isotope Probing (SIP)",
@@ -121,6 +124,30 @@
     "linkedin": "https://www.linkedin.com/in/alwiwidyananda"
   },
   {
-    "name": "Christabel Sim"
+    "name": "Christabel Anfield Sim Wanwen",
+    "role": "Masters Student",
+    "institution": "Swinburne University of Technology, Sarawak Campus",
+    "location": "Sarawak, Malaysia",
+    "email": "casim@swinburne.edu.my",
+    "bio": "Christabel’s research deals with the study of microplastic transport using the aid of modelling software to estimate the transport pathways of microplastics, to find out where they end up in our waters. Her study area is located at the Kuching Wetlands National Park (KWNP).",
+    "keywords": [
+      "Hydrodynamic Model",
+      "MIKE 21",
+      "Microplastic Transport"
+    ],
+    "publications": [
+      {
+        "authors": "Huda, F. R., Richard, F.S., Rahman, I., Moradi, S., Tay, C.Y.H., Sim, C.A.W., Fong, T.L, Aazani Mujahid and Müller, M.",
+        "year": 2023,
+        "title": "Comparison of learning models to predict LDPE, PET, and ABS concentrations in beach sediment based on spectral reflectance.",
+        "journal": "Scientific Reports",
+        "volume": 13,
+        "issue": 1,
+        "pages": "1-10",
+        "doi": "10.1038/s41598-023-33207-x",
+        "link": "https://doi.org/10.1038/s41598-023-33207-x"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/christabel-sim-9b8666304"
   }
 ]

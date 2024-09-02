@@ -28,7 +28,7 @@ export default function ContactUs() {
     if (!validateForm()) return;
 
     // Construct mailto link
-    const mailtoLink = `mailto:102781103@students.swinburne.edu.my?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:moritz.aques@gmail.com?subject=${encodeURIComponent(
       `AquES: email from ${formData.full_name}`
     )}&body=${encodeURIComponent(
       `To AquES,\n${formData.message}\n\nfrom ${formData.full_name}\n${formData.email_id}\n${formData.phone_num}`
