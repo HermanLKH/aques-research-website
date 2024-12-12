@@ -1,23 +1,5 @@
 [
   {
-    "id": "sr0001",
-    "name": "Ting Lik Fong",
-    "profile_picture": "/images/sr0001/profile.jpg",
-    "contact": {
-      "research": "https://scholar.google.com/citations?user=wapGI4AAAAAJ&hl=en"
-    }
-  },
-  {
-    "id": "sr0002",
-    "name": "Ts Dr Miko Chang May Lee",
-    "profile_picture": "/images/sr0002/profile.jpg",
-    "contact": {
-      "linkedin": "https://www.linkedin.com/in/mikochangmaylee/",
-      "research": "https://scholar.google.com.sg/citations?user=aIX92S0AAAAJ&hl=en"
-    },
-    "bio": "Miko Chang joined Swinburne University of Technology Sarawak Campus (SUTS) in 2021 as a senior lecturer in the field of data science and advanced analytics. Miko received her PhD from NUS Graduate School for Integrative Sciences and Engineering in 2019 and a Bachelor of Engineering (Biomedical Imaging) with First Class Honours from National University of Singapore (NUS) in 2014. She has teaching experience in NUS for CS1010E Programming Methodology and BN3201 Bio-mechanics. Prior to joining SUTS, Miko Chang has worked with numerous multi-national companies including MSD Singapore, Country Garden (China), HILTI (Europe) and a Sarawakian company NAIM Holdings. During her career with HILTI Group as a Global IT Data Scientist, she was involved in a wide range of industrial data science projects including customer engagement analysis, financial sales forecasting, logistics demand forecasting and ad-hoc data science tasks. She helped setting-up the Data Science and Analytics Community and was the scrum master for the data science team who advocated agile methodology in the organisation. Combining both her academic and industrial experience, her current research focuses on data science and analytics, data-driven applications for digital economy, data-centric AI and data governance."
-  },
-  {
     "id": "sr0003",
     "name": "Dr Wong Changi",
     "profile_picture": "/images/sr0003/profile.jpg",

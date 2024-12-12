@@ -14,7 +14,7 @@ const ProfilePage = async ({ params }: { params: { id: string } }) => {
 
   if (!profileData) {
     return (
-      <div className="flex items-center justify-center h-screen bg-slate-50">
+      <div className="flex items-center justify-center h-screen">
         <p className="text-2xl text-gray-600">Profile not found.</p>
       </div>
     );
@@ -28,14 +28,6 @@ const ProfilePage = async ({ params }: { params: { id: string } }) => {
           <span>&emsp;</span>
         </>
       )}
-      {/* {index > 0 && (
-        <>
-          <br />
-          <br />
-          <span>&emsp;</span>
-          <span>&emsp;</span>
-        </>
-      )} */}
       {text}
     </React.Fragment>
   ));
@@ -43,7 +35,7 @@ const ProfilePage = async ({ params }: { params: { id: string } }) => {
   const activityImages = await getActivityPhotos(params.id);
 
   return (
-    <div className="container mx-auto px-24 p-6 bg-slate-50 min-h-screen">
+    <div className="container mx-auto px-24 p-6 min-h-screen">
       {/* Section 1: Profile Image, Name, Role & Contact Information */}
       <div className="md:flex items-center py-8">
         {/* Profile Image */}

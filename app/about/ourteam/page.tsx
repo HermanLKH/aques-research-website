@@ -6,8 +6,7 @@ import getFounders from "@/hooks/getFounders";
 import getRStudents from "@/hooks/getRStudents";
 import getSResearchers from "@/hooks/getSResearchers";
 import getAlumni from "@/hooks/getAlumni";
-import SResearcherCards from "./_components/sResearcherCards";
-import FounderCards from "./_components/founderCards";
+import TeamMemberCards from "./_components/teamMemberCards";
 
 export default function OurTeam() {
   // Load all members profile data
@@ -42,8 +41,7 @@ export default function OurTeam() {
           <h1 className="w-full font-semibold text-3xl text-center mb-5">
             Founders
           </h1>
-
-          <FounderCards founders={founders} />
+          <TeamMemberCards researchers={founders} />
         </div>
       </section>
 
@@ -54,7 +52,7 @@ export default function OurTeam() {
             Senior Researchers
           </h2>
 
-          <SResearcherCards researchers={sResearchers} />
+          <TeamMemberCards researchers={sResearchers} />
         </div>
       </section>
 

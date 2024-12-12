@@ -27,6 +27,16 @@ export default function News() {
           </h2>
         </div>
       </section>
+
+      {/* Section 3: X */}
+      <section className="py-10 flex justify-center">
+        <div className="w-full lg:w-4/5 flex flex-col items-center">
+          {/* subheader */}
+          <h2 className="font-semibold text-3xl text-center mb-5">
+            Visit Our X Page
+          </h2>
+        </div>
+      </section>
     </>
   );
 }

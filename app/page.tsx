@@ -38,7 +38,7 @@ export default function Home() {
             <Button
               asChild
               variant="ghost"
-              className="animate-bounce text-white mt-5 text-md underline"
+              className=" text-white mt-5 text-md underline"
             >
               <Link href="/">
                 Learn more about AquES

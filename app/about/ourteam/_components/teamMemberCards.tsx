@@ -1,7 +1,7 @@
 import { Profile } from "@/lib/types";
-import SResearcherCard from "./sResearcherCard";
+import TeamMemberCard from "./teamMemberCard";
 
-export default function SResearcherCards({
+export default function TeamMemberCards({
   researchers,
 }: {
   researchers: Profile[];
@@ -9,7 +9,7 @@ export default function SResearcherCards({
   return (
     <div className="flex flex-wrap justify-center -mx-4">
       {researchers.map((researcher) => (
-        <SResearcherCard key={researcher.id} sResearcher={researcher} />
+        <TeamMemberCard key={researcher.id} sResearcher={researcher} />
       ))}
     </div>
   );
