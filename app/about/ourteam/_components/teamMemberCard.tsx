@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { FaGoogleScholar } from "react-icons/fa6";
 
-export default function SResearcherCard({
+export default function TeamMemberCard({
   sResearcher,
 }: {
   sResearcher: Profile;
