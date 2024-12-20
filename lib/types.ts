@@ -109,3 +109,11 @@ export interface EmailFormState {
   phone_num: string;
   message: string;
 }
+
+export interface QuizQuestion {
+  id: number;
+  category: string;
+  question: string;
+  options: string[];
+  correct: number;
+}

@@ -1,0 +1,280 @@
+[
+    {
+        "id": 1,
+        "category": "Climate and Weather of Sarawak",
+        "questions": [
+            {
+                "id": 1,
+                "question": "What is the general climate type in Sarawak?",
+                "options": [
+                    "Tropical rainforest climate",
+                    "Desert climate",
+                    "Temperate climate",
+                    "Savanna climate"
+                ],
+                "correct": 0
+            },
+            {
+                "id": 2,
+                "question": "Sarawak experiences rainfall throughout the year. Which months are considered the wettest?",
+                "options": [
+                    "June to September",
+                    "October to March",
+                    "April to May",
+                    "January to March"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 3,
+                "question": "The average temperature in Sarawak typically ranges between?",
+                "options": [
+                    "18°C and 25°C",
+                    "25°C and 32°C",
+                    "30°C and 38°C",
+                    "15°C and 20°C"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 4,
+                "question": "Which of the following factors influences the climate of Sarawak the most?",
+                "options": [
+                    "The presence of the Himalayas",
+                    "The surrounding South China Sea",
+                    "The El Niño phenomenon",
+                    "Its proximity to the Arctic Ocean"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 5,
+                "question": "What is the primary cause of frequent flooding in Sarawak?",
+                "options": [
+                    "High-altitude rainfall",
+                    "Coastal erosion",
+                    "Deforestation and soil erosion",
+                    "Frequent hurricanes"
+                ],
+                "correct": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Biodiversity of Sarawak",
+        "questions": [
+            {
+                "id": 1,
+                "question": "Sarawak is home to which of the following animal species?",
+                "options": [
+                    "Orangutan",
+                    "Giant panda",
+                    "Koala",
+                    "African lion"
+                ],
+                "correct": 0
+            },
+            {
+                "id": 2,
+                "question": "What is the major threat to wildlife in Sarawak's rainforests?",
+                "options": [
+                    "Poaching and illegal hunting",
+                    "Invasive species",
+                    "Deforestation and habitat loss",
+                    "Overfishing in rivers"
+                ],
+                "correct": 2
+            },
+            {
+                "id": 3,
+                "question": "The endangered Bornean pygmy elephant is found in which region of Sarawak?",
+                "options": [
+                    "Central Sarawak",
+                    "Southern Sarawak",
+                    "Northern Sarawak",
+                    "Coastal Sarawak"
+                ],
+                "correct": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Environmental Challenges in Sarawak",
+        "questions": [
+            {
+                "id": 1,
+                "question": "What is one of the major environmental issues caused by large-scale logging in Sarawak?",
+                "options": [
+                    "Desertification",
+                    "Soil erosion",
+                    "Urban sprawl",
+                    "River silting"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 2,
+                "question": "Which river in Sarawak is known to be heavily impacted by deforestation and mining activities?",
+                "options": [
+                    "Rajang River",
+                    "Kapuas River",
+                    "Melaka River",
+                    "Kinabatangan River"
+                ],
+                "correct": 0
+            },
+            {
+                "id": 3,
+                "question": "What percentage of Sarawak's land area is covered by forests?",
+                "options": [
+                    "~80%",
+                    "~30%",
+                    "~50%",
+                    "~60%"
+                ],
+                "correct": 3
+            },
+            {
+                "id": 4,
+                "question": "Which of the following conservation strategies is being implemented in Sarawak to address the loss of biodiversity?",
+                "options": [
+                    "Wildlife corridors",
+                    "Reforestation programs",
+                    "Sustainable logging practices",
+                    "All of the above"
+                ],
+                "correct": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Conservation Efforts in Sarawak",
+        "questions": [
+            {
+                "id": 1,
+                "question": "Which of the following organizations is working to protect the rainforests and biodiversity of Sarawak?",
+                "options": [
+                    "WWF Malaysia",
+                    "Greenpeace",
+                    "The Rainforest Trust",
+                    "All of the above"
+                ],
+                "correct": 3
+            },
+            {
+                "id": 2,
+                "question": "What is the Sarawak Government's role in conservation efforts?",
+                "options": [
+                    "Strict enforcement of anti-poaching laws",
+                    "Development of national parks and protected areas",
+                    "Collaboration with environmental NGOs",
+                    "All of the above"
+                ],
+                "correct": 3
+            },
+            {
+                "id": 3,
+                "question": "The famous Mulu Caves in Sarawak are a UNESCO World Heritage site. What is the main reason for this recognition?",
+                "options": [
+                    "The caves' natural beauty and geological formations",
+                    "The caves' rich biodiversity",
+                    "The caves' historical significance",
+                    "The caves' role in local cultural traditions"
+                ],
+                "correct": 0
+            },
+            {
+                "id": 4,
+                "question": "The protection of Sarawak’s coastal areas is crucial for preserving which ecosystem?",
+                "options": [
+                    "Coral reefs",
+                    "Mangrove forests",
+                    "Grasslands",
+                    "Saltwater marshes"
+                ],
+                "correct": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Sarawak's Unique Environmental Features",
+        "questions": [
+            {
+                "id": 1,
+                "question": "Sarawak is home to the world’s longest network of caves in which national park?",
+                "options": [
+                    "Taman Negara",
+                    "Gunung Mulu National Park",
+                    "Bako National Park",
+                    "Kinabalu Park"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 2,
+                "question": "Which of the following is a unique feature of Sarawak’s coastline?",
+                "options": [
+                    "Large numbers of coral reefs",
+                    "The presence of saltwater crocodiles",
+                    "A rich population of penguins",
+                    "Extensive mangrove forests"
+                ],
+                "correct": 3
+            },
+            {
+                "id": 3,
+                "question": "Sarawak’s peat swamp forests are vital for which environmental function?",
+                "options": [
+                    "Carbon sequestration",
+                    "Water purification",
+                    "Wildlife habitat",
+                    "All of the above"
+                ],
+                "correct": 3
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Mangroves",
+        "questions": [
+            {
+                "id": 1,
+                "question": "Which country has the most mangroves?",
+                "options": [
+                    "Indonesia",
+                    "Malaysia",
+                    "China",
+                    "Thailand"
+                ],
+                "correct": 0
+            },
+            {
+                "id": 2,
+                "question": "What percentage of the world’s mangroves are in Malaysia?",
+                "options": [
+                    "~6%",
+                    "~10%",
+                    "~15%",
+                    "~20%"
+                ],
+                "correct": 1
+            },
+            {
+                "id": 3,
+                "question": "Which state in Malaysia has the most mangroves?",
+                "options": [
+                    "Kedah",
+                    "Sarawak",
+                    "Selangor",
+                    "Sabah"
+                ],
+                "correct": 3
+            }
+        ]
+    }
+]

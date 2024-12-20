@@ -1,12 +1,18 @@
+import { useState, useEffect } from "react";
+import Quiz from "@/components/quiz";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi";
+import { getQuizQuestions } from "@/hooks/getQuizQuestions";
+import { QuizQuestion } from "@/lib/types";
 
 export default function Home() {
   // Get the current year and month
   const currentYear = new Date().getFullYear();
   const currentMonth = new Date().getMonth() + 1; // getMonth() returns 0-based index
+
+  const quizQuestions: QuizQuestion[] = getQuizQuestions();
 
   return (
     <>
@@ -49,13 +55,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 2: Live Display of AquaWatch loggers & camera images */}
-      <section>
-        <p>Live Display of AquaWatch loggers & camera images</p>
-      </section>
-
-      {/* Section 3: Live display of AERONET data */}
+      {/* Section 2: Live display of AERONET data */}
       <section className="text-center my-8">
+        <h1>AERONET</h1>
+        <p>
+          AERONET (Aerosol Robotic Network) is a global, ground-based remote
+          sensing network of sun- and sky-scanning radiometers designed to
+          provide long-term, continuous, and readily accessible observations of
+          atmospheric aerosol characteristics. Operated under the oversight of
+          NASA, in collaboration with various international agencies and
+          research institutions, AERONET focuses on measuring how much sunlight
+          is scattered or absorbed by airborne particles such as dust, smoke,
+          pollution, and sea salt. By using standardised instruments and
+          calibration protocols, AERONET ensures consistent data quality,
+          enabling accurate comparisons across geographic regions and over time.
+        </p>
         <p>Live display of AERONET data</p>
         <div className="flex justify-center gap-8">
           <Image
@@ -75,9 +89,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: Discover our Live Camera here */}
-      <section>
-        <p>Discover our live camera here</p>
+      {/* Section 3: Quiz section */}
+      <section className=" bg-slate-50">
+        <div className="w-2/3 mx-auto flex flex-col justify-center">
+          <Quiz questions={quizQuestions} />
+        </div>
       </section>
     </>
   );
