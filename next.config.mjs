@@ -4,9 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "aeronet.gsfc.nasa.gov",
-        port: "",
-        pathname: "/cgi-bin/draw_data_chart_v3/**",
+        hostname: "**",
+        // port: "",
+        // pathname: "/cgi-bin/draw_data_chart_v3/**",
       },
     ],
   },
