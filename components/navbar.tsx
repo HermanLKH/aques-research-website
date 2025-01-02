@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { truncate } from "@/lib/helper";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -65,17 +66,29 @@ export function Navbar() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/research/1" title="Greenhouse Gases">
-                      ...
+                    <ListItem
+                      href="/research/greenhouse-gas-emissions"
+                      title="Greenhouse Gas Emissions"
+                    >
+                      Aquatic Emissions Research | Climate Change Interactions |
+                      Modelling and Prediction
                     </ListItem>
-                    <ListItem href="/research/2" title="Microplastics">
-                      ...
+                    <ListItem
+                      href="/research/microplastics-pollution"
+                      title={truncate(
+                        "Microplastics Pollution and Bioremediation"
+                      )}
+                    >
+                      Investigation of Sources and Distribution | Impact
+                      Assessment on Ecosystems Interactions | Microbial
+                      Bioremediation Solutions
                     </ListItem>
-                    <ListItem href="/research/3" title="Remote Sensing">
-                      ...
-                    </ListItem>
-                    <ListItem href="/research/4" title="More Research Focus">
-                      ...
+                    <ListItem
+                      href="/research/environmental-microbiology"
+                      title="Environmental Microbiology"
+                    >
+                      Microbial Diversity Studies | Endophyte Research | Coral
+                      Microbiome Studies | Biogeochemical Cycles
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

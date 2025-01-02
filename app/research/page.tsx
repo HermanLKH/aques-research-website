@@ -1,40 +1,81 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi";
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function Research() {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 3000 }),
+  ]);
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Fetch images from the API
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("/api/microplastics-pollution-images");
+        if (!response.ok) {
+          throw new Error("Failed to fetch images");
+        }
+        const data = await response.json();
+        setImages(data);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   return (
     <>
       {/* Section 1: Cover, title, description */}
-      <section>
-        <div
-          className="w-full flex justify-center relative overflow-hidden"
-          style={{
-            backgroundImage: "url('/images/wavebg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "50vh", // Set the desired height here
-          }}
-        >
-          {/* Container for background overlay */}
-          <div className="bg-black bg-opacity-50 p-10 w-full flex flex-col items-center justify-center">
-            {/* Title */}
-            <h1 className="font-bold text-5xl text-center text-white mb-4">
-              Our <span className="text-cyan-300">Research</span>
-            </h1>
-            <p className="text-center text-white font-light">
-              At AQUES, our research is dedicated to studying various aspects of
-              the Anthropocene, a defining period characterized by significant
-              human impact on the environment.
-            </p>
+      <section className="w-11/12 md:w-2/3 mx-auto mt-12 flex flex-col md:flex-row items-center justify-between">
+        {/* Left Section: Title and Description */}
+        <div className="p-10 flex-1 md:mr-4 flex flex-col items-center md:items-start justify-center">
+          {/* Title */}
+          <h1 className="font-bold text-4xl md:text-5xl text-center md:text-left text-black mb-4">
+            Our <span className="text-cyan-700">Research</span>
+          </h1>
+          {/* Description */}
+          <p className="text-center md:text-left text-black font-light leading-relaxed">
+            At AQUES, our research is dedicated to studying various aspects of
+            the Anthropocene, a defining period characterized by significant
+            human impact on the environment.
+          </p>
+        </div>
+
+        {/* Right Section: Carousel */}
+        <div className="embla flex-1 md:ml-4">
+          <div className="embla__viewport h-96 border" ref={emblaRef}>
+            <div className="embla__container h-full">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="embla__slide flex items-center justify-center"
+                >
+                  <Image
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="h-full w-full object-cover"
+                    width={400}
+                    height={400}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Section 2: Explore Research */}
-      <section className="my-20">
+      <section className="mt-10 py-10 bg-slate-50">
         {/* Title */}
         <h2 className="font-medium text-3xl text-center">
           Our focus of investigations
@@ -74,7 +115,7 @@ export default function Research() {
                 variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
-                <Link href="/">
+                <Link href="/research/greenhouse-gas-emissions">
                   Learn more
                   <HiArrowRight className="ml-2" />
                 </Link>
@@ -111,7 +152,7 @@ export default function Research() {
                 variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
-                <Link href="/">
+                <Link href="/research/microplastics-pollution">
                   Learn more
                   <HiArrowRight className="ml-2" />
                 </Link>
@@ -167,24 +208,13 @@ export default function Research() {
                 variant="link"
                 className="mt-5 text-md text-cyan-700"
               >
-                <Link href="/">
+                <Link href="/research/environmental-microbiology">
                   Learn more
                   <HiArrowRight className="ml-2" />
                 </Link>
               </Button>
             </div>
           </div>
-        </div>
-
-        {/* View more link */}
-        <div className="flex justify-center m-20">
-          <Button
-            variant="link"
-            className="text-cyan-700 text-md animate-bounce"
-          >
-            More Research Focus
-            <HiArrowRight className="ml-2" />
-          </Button>
         </div>
       </section>
     </>

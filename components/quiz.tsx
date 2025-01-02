@@ -45,9 +45,9 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
 
   return (
     <section className="my-10 px-5">
-      <h2 className="text-3xl font-bold text-center mb-8">
+      <h1 className="text-2xl font-semibold mb-4 text-center">
         Test Your Understanding
-      </h2>
+      </h1>
 
       {/* Render the current question */}
       <div className="border p-5 rounded-lg shadow-md bg-white">

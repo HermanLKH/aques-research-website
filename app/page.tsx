@@ -21,7 +21,7 @@ export default function Home() {
         <div
           className="w-full flex justify-center relative overflow-hidden"
           style={{
-            backgroundImage: "url('/images/beachbg.jpg')",
+            backgroundImage: "url('/images/team_photo.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "50vh",
@@ -56,9 +56,9 @@ export default function Home() {
       </section>
 
       {/* Section 2: Live display of AERONET data */}
-      <section className="text-center my-8">
-        <h1>AERONET</h1>
-        <p>
+      <section className="w-11/12 md:w-2/3 mx-auto text-center my-8">
+        <h1 className="text-3xl font-semibold mb-4">AERONET</h1>
+        <p className="text-md leading-relaxed mb-4">
           AERONET (Aerosol Robotic Network) is a global, ground-based remote
           sensing network of sun- and sky-scanning radiometers designed to
           provide long-term, continuous, and readily accessible observations of
@@ -70,22 +70,22 @@ export default function Home() {
           calibration protocols, AERONET ensures consistent data quality,
           enabling accurate comparisons across geographic regions and over time.
         </p>
-        <p>Live display of AERONET data</p>
-        <div className="flex justify-center gap-8">
+        <p className="text-lg font-medium mb-6">Live display of AERONET data</p>
+        <div className="flex flex-col md:flex-row justify-center gap-8">
           <Image
             src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&aero_water=0&level=1&if_day=0&if_err=0`}
             width={500}
             height={500}
             alt="graph 1"
             className="border border-gray-300 rounded-lg"
-          ></Image>
+          />
           <Image
             src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&month=${currentMonth}&aero_water=0&level=1&if_day=0&if_err=0`}
             width={500}
             height={500}
             alt="graph 2"
             className="border border-gray-300 rounded-lg"
-          ></Image>
+          />
         </div>
       </section>
 
