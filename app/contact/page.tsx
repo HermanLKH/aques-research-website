@@ -20,6 +20,9 @@ export default function ContactUs() {
   const { formData, errors, handleChange, validateForm } =
     useFormValidation(initialState);
 
+  // List of email recipients
+  const recipients = ["moritz.aques@gmail.com", "#", "#"];
+
   // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,8 +30,10 @@ export default function ContactUs() {
     // Validate form
     if (!validateForm()) return;
 
-    // Construct mailto link
-    const mailtoLink = `mailto:moritz.aques@gmail.com?subject=${encodeURIComponent(
+    // Construct mailto link with multiple recipients
+    const mailtoLink = `mailto:${recipients.join(
+      ","
+    )}?subject=${encodeURIComponent(
       `AquES: email from ${formData.full_name}`
     )}&body=${encodeURIComponent(
       `To AquES,\n${formData.message}\n\nfrom ${formData.full_name}\n${formData.email_id}\n${formData.phone_num}`
