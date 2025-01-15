@@ -40,7 +40,6 @@ export default function TeamMemberCard({
 
       {/* Content Area */}
       <div className="p-5 flex flex-col flex-grow">
-        <h6 className="text-sm text-cyan-600 font-normal">Senior Researcher</h6>
         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white line-clamp-2 text-justify">
           {sResearcher.name}
         </h5>

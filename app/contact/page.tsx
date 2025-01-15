@@ -21,7 +21,7 @@ export default function ContactUs() {
     useFormValidation(initialState);
 
   // List of email recipients
-  const recipients = ["moritz.aques@gmail.com", "#", "#"];
+  const recipients = ["myaquesgroup@gmail.com"];
 
   // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {

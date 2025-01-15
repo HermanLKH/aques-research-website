@@ -3,7 +3,11 @@
     "id": "fdr0001",
     "name": "Professor Dr Moritz Müller",
     "profile_picture": "/images/fdr0001/profile.jpg",
+    "role": "Founder",
+    "institution": "Swinburne University of Technology Sarawak Campus",
+    "location": "Jalan Simpang Tiga 93350 Kuching, Sarawak, Malaysia",
     "contact": {
+      "email": "moritz.aques@gmail.com",
       "linkedin": "https://www.linkedin.com/in/moritz-m%C3%BCller-1b105723/",
       "research": "https://scholar.google.com.my/citations?user=taXOvK8AAAAJ&hl=en"
     },
@@ -20,9 +24,20 @@
     "id": "fdr0002",
     "name": "Associate Professor Dr Aazani Mujahid",
     "profile_picture": "/images/fdr0002/profile.jpg",
+    "role": "Founder",
+    "institution": "Universiti Malaysia Sarawak (UNIMAS)",
+    "location": "Jalan Datuk Mohammad Musa, 94300 Kota Samarahan, Sarawak, Malaysia",
     "contact": {
+      "email": "aazanimujahid@gmail.com",
       "linkedin": "https://www.linkedin.com/in/aazani-mujahid-7309771a/",
       "research": "https://scholar.google.com.my/citations?user=q2Sg9akAAAAJ&hl=en"
-    }
+    },
+    "bio": "",
+    "area_of_interest": [
+      "Physical Operational Oceanography",
+      "Shelf Seas",
+      "Coral Reefs",
+      "Climate Change Adaptation"
+    ]
   }
 ]

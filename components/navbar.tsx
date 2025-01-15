@@ -34,9 +34,11 @@ export function Navbar() {
       <ul className="flex justify-between w-11/12 md:w-3/4 lg:w-2/3 xl:w-[80%]">
         <li>
           <a href="/">
-            <h1 className="text-4xl font-semibold">AquES</h1>
-            <p className="text-sm font-light">
-              Aquatic & Environmental Sciences
+            <h1 className="text-2xl font-semibold leading-tight">
+              <span className="text-cyan-600">Aqu</span>ES
+            </h1>
+            <p className="text-xs font-light leading-tight">
+              Aquatic &amp; Environmental Sciences
             </p>
           </a>
         </li>
@@ -112,13 +114,21 @@ export function Navbar() {
               </NavigationMenuItem>
               {/* Item 3 */}
               <NavigationMenuItem>
+                <Link href="/publications" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Publications
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              {/* Item 4 */}
+              <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Live Cam
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              {/* Item 4 */}
+              {/* Item 5 */}
               <NavigationMenuItem>
                 <Link href="/news" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -126,7 +136,7 @@ export function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              {/* Item 5 */}
+              {/* Item 6 */}
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>

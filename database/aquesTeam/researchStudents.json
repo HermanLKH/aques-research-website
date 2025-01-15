@@ -19,6 +19,9 @@
   },
   {
     "name": "Arooj Fatima Tul Zahra",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/arooj-zahra-a640b61b7/"
+    },
     "role": "MSc (Research) Candidate, BSc (Biotechnology)",
     "position": "Vice President of Swinburne Postgraduate Research Society (2024)",
     "institution": "Swinburne University of Technology, Sarawak Campus",
@@ -39,6 +42,9 @@
   },
   {
     "name": "Jonathan Lee Wen Han",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/jonathan-lee-164b25223/"
+    },
     "role": "MSc (Research) Candidate, BSc (Biotechnology)",
     "institution": "Swinburne University of Technology, Sarawak Campus",
     "bio": "Jonathan’s research focuses on biohydrogen production using green microalgae, aiming to contribute to the viable upscaling or industrial scale of biohydrogen production, which is currently still in the research phase. He also has experience in agricultural science research related to biochar production from sago barks during his Final Year Research Project.",
@@ -64,6 +70,9 @@
   },
   {
     "name": "Clarence Tay",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/clarence-yuen-hua-tay-a7845b304"
+    },
     "role": "MSc (Research) Candidate, BSc (Biotechnology)",
     "institution": "Swinburne University of Technology, Sarawak Campus",
     "bio": "Clarence’s research focuses on microplastics, aiming to develop a clearer picture of microplastic pollution in Southeast Asian coastal regions. His expertise includes microscopic techniques such as fluorescence microscopy and developing predictive models. He is also involved in community outreach programs to raise awareness of plastic pollution.",
@@ -98,11 +107,13 @@
         "doi": "10.1038/s41598-023-33207-x",
         "link": "https://doi.org/10.1038/s41598-023-33207-x"
       }
-    ],
-    "linkedin": "https://www.linkedin.com/in/clarence-yuen-hua-tay-a7845b304"
+    ]
   },
   {
     "name": "Alwi Nurmadi Widyananda",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/alwiwidyananda"
+    },
     "role": "MSc (Research) Candidate",
     "institution": "Swinburne University of Technology, Sarawak Campus",
     "location": "Q5B, 93350, Kuching, Sarawak, Malaysia",
@@ -120,11 +131,13 @@
         "institution": "Swinburne University of Technology, Sarawak",
         "year": 2020
       }
-    ],
-    "linkedin": "https://www.linkedin.com/in/alwiwidyananda"
+    ]
   },
   {
     "name": "Christabel Anfield Sim Wanwen",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/christabel-sim-9b8666304"
+    },
     "role": "Masters Student",
     "institution": "Swinburne University of Technology, Sarawak Campus",
     "location": "Sarawak, Malaysia",
@@ -147,7 +160,6 @@
         "doi": "10.1038/s41598-023-33207-x",
         "link": "https://doi.org/10.1038/s41598-023-33207-x"
       }
-    ],
-    "linkedin": "https://www.linkedin.com/in/christabel-sim-9b8666304"
+    ]
   }
 ]
