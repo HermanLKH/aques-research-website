@@ -15,7 +15,7 @@ export interface Location {
 export interface LocationData {
   locationId: number; // $int64
   parameters: Parameter[];
-  earliestTime: EpochTimeStamp;
+  // earliestTime: EpochTimeStamp;
 }
 
 export interface Parameter {

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi";
 import { getQuizQuestions } from "@/hooks/getQuizQuestions";
 import { QuizQuestion } from "@/lib/types";
+import AquaWatchData from "./_components/AquawatchData";
 
 export default function Home() {
   // Get the current year and month
@@ -55,7 +56,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 2: Live display of AERONET data */}
+      {/* Section 2: Live display of AquaWatch data */}
+      <AquaWatchData />
+
+      {/* Section 3: Live display of AERONET data */}
       <section className="w-11/12 md:w-2/3 mx-auto text-center my-8">
         <h1 className="text-3xl font-semibold mb-4">AERONET</h1>
         <p className="text-md leading-relaxed mb-4">
@@ -89,7 +93,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Quiz section */}
+      {/* Section 4: Quiz section */}
       <section className=" bg-slate-50">
         <div className="w-2/3 mx-auto flex flex-col justify-center">
           <Quiz questions={quizQuestions} />
