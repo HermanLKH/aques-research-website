@@ -18,11 +18,13 @@ export function Footer() {
         <li className="flex flex-col items-start">
           <Button variant="link" className="text-white flex items-center gap-2">
             <FaFacebook />
-            <Link href={"#"}>@aquesfacebookusername</Link>
+            <Link href={"https://www.facebook.com/AquaEnviroSci/"}>
+              @Aquatic and Environmental Sciences - AQUES{" "}
+            </Link>
           </Button>
           <Button variant="link" className="text-white flex items-center gap-2">
             <FaXTwitter />
-            <Link href={"#"}>@aquesXusername</Link>
+            <Link href={"https://x.com/aques_my"}>@AQUES_MY</Link>
           </Button>
         </li>
 
