@@ -122,9 +122,9 @@ export function Navbar() {
               </NavigationMenuItem>
               {/* Item 4 */}
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="/tide" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Live Cam
+                    Tide
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
