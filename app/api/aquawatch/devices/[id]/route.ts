@@ -31,7 +31,7 @@ export async function GET(
   try {
     // initialize api url
     const now: EpochTimeStamp = Math.floor(Date.now() / 1000); // Convert to seconds
-    const startTime: EpochTimeStamp = (now - 690000) as EpochTimeStamp;
+    const startTime: EpochTimeStamp = (now - 862800) as EpochTimeStamp;
 
     const token = await getHydrovuAuthToken();
 
