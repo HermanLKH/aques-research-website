@@ -175,7 +175,7 @@ export default function Research() {
           <div className="w-3/5 flex">
             <div className="w-1/3 flex items-stretch">
               <Image
-                src="/images/remotesensing.webp"
+                src="/images/environmental_microbiology.jpg"
                 width={500}
                 height={0}
                 className="h-full object-cover"

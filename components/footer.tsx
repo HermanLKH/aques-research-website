@@ -50,6 +50,12 @@ export function Footer() {
               Dr Wong Changi
             </Link>
           </Button>
+          <Button variant="link" className="text-white flex items-center gap-2">
+            <FaLinkedin />
+            <Link href={"https://www.linkedin.com/in/jenny-choo-50a697286"}>
+              Dr Jenny Choo
+            </Link>
+          </Button>
         </li>
       </ul>
     </div>
