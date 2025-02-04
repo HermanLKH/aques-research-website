@@ -151,5 +151,25 @@
         "link": "https://mjm.usm.my/uploads/issues/1554/MJM-18-0037_COLOUR.pdf"
       }
     ]
+  },
+  {
+    "id": "sr0005",
+    "name": "Johnathan Daniel Maxey",
+    "profile_picture": "/images/sr0005/profile.jpg",
+    "role": "Postdoctoral Researcher",
+    "institution": "Swinburne University of Technology, Sarawak campus",
+    "location": "Jalan Simpang Tiga, 93350, Kuching, Sarawak, Malaysia",
+    "contact": {
+      "email": "jdanielmaxey@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/johnathan-daniel-maxey-42175649/",
+      "research": "https://scholar.google.com/citations?hl=en&user=U02szC0AAAAJ"
+    },
+    "area_of_interest": [
+      "Aquaculture Environmental Interactions",
+      "Nitrogen Cycling",
+      "Dissolved Oxygen",
+      "Benthic Pelagic Coupling"
+    ],
+    "bio": "I was introduced to the field of microbial ecology and nutrient cycling during my master's research and have been involved in projects regarding environmental monitoring, nutrient cycling, benthic and pelagic microbial ecology for the US Department of Defence, the Tasmanian Salmon Growers Association, and Sanford, among others. I studied the interaction of dissolved oxygen, nitrous oxide, and aquaculture as part of my PhD research. My interests lie in gaining an improved understandings of aquaculture environmental interactions, especially regarding biogeochemical impacts and aquaculture site selection."
   }
 ]
