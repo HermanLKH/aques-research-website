@@ -59,6 +59,17 @@ export default function Home() {
       {/* Section 2: Live display of AquaWatch data */}
       <AquaWatchData />
 
+      {/* NEW Section: Video Embed Below AquaWatch Data */}
+      <section className="w-11/12 md:w-2/3 mx-auto my-8 flex flex-col items-center">
+        <iframe
+          src="https://drive.google.com/file/d/1EUfmDnnF_Z5jj9RZdrim60cn6MmOvh2a/preview"
+          width="760"
+          height="480"
+          allow="autoplay"
+          className="border border-gray-300 rounded-lg shadow-lg"
+        />
+      </section>
+
       {/* Section 3: Live display of AERONET data */}
       <section className="w-11/12 md:w-2/3 mx-auto text-center my-8">
         <h1 className="text-3xl font-semibold mb-4">AERONET</h1>

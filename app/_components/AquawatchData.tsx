@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
   Title,
+  ChartOptions,
 } from "chart.js";
 
 ChartJS.register(
@@ -27,9 +28,13 @@ export default function AquaWatchData() {
   const [tempData, setTempData] = useState<any>(null);
   const [phData, setPhData] = useState<any>(null);
 
-  const chartTempOptions = {
+  const chartTempOptions: ChartOptions<"line"> = {
     responsive: true,
     maintainAspectRatio: true,
+    interaction: {
+      mode: "index",
+      intersect: false,
+    },
     plugins: {
       title: {
         display: true,
@@ -38,7 +43,6 @@ export default function AquaWatchData() {
       },
       tooltip: {
         enabled: true,
-        mode: "index",
         intersect: false,
         callbacks: {
           title: (tooltipItems: any) => {
@@ -59,15 +63,15 @@ export default function AquaWatchData() {
         },
       },
     },
-    hover: {
+  };
+
+  const chartPHOptions: ChartOptions<"line"> = {
+    responsive: true,
+    maintainAspectRatio: true,
+    interaction: {
       mode: "index",
       intersect: false,
     },
-  };
-
-  const chartPHOptions = {
-    responsive: true,
-    maintainAspectRatio: true,
     plugins: {
       title: {
         display: true,
@@ -76,7 +80,6 @@ export default function AquaWatchData() {
       },
       tooltip: {
         enabled: true,
-        mode: "index",
         intersect: false,
         callbacks: {
           title: (tooltipItems: any) => {
@@ -96,10 +99,6 @@ export default function AquaWatchData() {
           stepSize: 0.2,
         },
       },
-    },
-    hover: {
-      mode: "index",
-      intersect: false,
     },
   };
 
