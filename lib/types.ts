@@ -1,4 +1,5 @@
 // types.ts
+import emailjs from "emailjs-com";
 
 export interface GPS {
   latitude: number;

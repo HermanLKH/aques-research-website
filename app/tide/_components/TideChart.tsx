@@ -10,7 +10,8 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler, // For the area fill
+  Filler,
+  ChartOptions, // For the area fill
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -109,7 +110,7 @@ export default function TideChart() {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"line"> = {
     responsive: true,
     maintainAspectRatio: true,
     plugins: {

@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 
 export default function News() {
@@ -16,7 +17,6 @@ export default function News() {
           </p>
         </div>
       </section>
-
       {/* Section 2: Social Media Feeds (Single Column) */}
       <section className="max-w-5xl mx-auto px-6 mb-16">
         <h2 className="text-xl font-semibold text-center mb-8">
@@ -26,28 +26,13 @@ export default function News() {
         {/* Facebook Feed */}
         <div className="bg-white shadow rounded p-4 mb-10">
           <h3 className="text-lg font-semibold mb-4">Facebook Updates</h3>
-          <div
-            className="sk-ww-facebook-page-posts"
-            data-embed-id="25511748"
-          ></div>
-        </div>
-
-        {/* Twitter Feed */}
-        <div className="bg-white shadow rounded p-4">
-          <h3 className="text-lg font-semibold mb-4">Twitter Updates</h3>
-          <div className="sk-ww-twitter-feed" data-embed-id="25511606"></div>
+          <iframe
+            src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25528763"
+            width="100%"
+            height="1000"
+          ></iframe>
         </div>
       </section>
-
-      {/* SociableKIT Scripts */}
-      <script
-        src="https://widgets.sociablekit.com/facebook-page-posts/widget.js"
-        defer
-      ></script>
-      <script
-        src="https://widgets.sociablekit.com/twitter-feed/widget.js"
-        defer
-      ></script>
     </>
   );
 }

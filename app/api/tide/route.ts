@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 // Use named imports from Cheerio
-import { load, Element } from "cheerio";
+import { load } from "cheerio";
+import type { Element } from "domhandler";
 
 export async function GET(req: NextRequest) {
   try {
