@@ -12,7 +12,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
     Record<number | string, number>
   >({});
   const [showAnswers, setShowAnswers] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0); // Track the current question index
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleAnswerClick = (
     questionId: number | string,
@@ -28,40 +28,43 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const handleNext = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
-      setShowAnswers(false); // Reset showAnswers for the next question
+      setShowAnswers(false);
     }
   };
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
-      setShowAnswers(false); // Reset showAnswers for the previous question
+      setShowAnswers(false);
     }
   };
 
-  const currentQuestion = questions[currentIndex]; // Get the current question
-  const category = currentQuestion.category; // Assuming each question has a `category` property
-  const sequence = `${currentIndex + 1}/${questions.length}`; // Current question sequence
+  const currentQuestion = questions[currentIndex];
+  const category = currentQuestion.category;
+  const sequence = `${currentIndex + 1}/${questions.length}`;
 
   return (
-    <section className="my-10 px-5">
-      <h1 className="text-2xl font-semibold mb-4 text-center">
+    <section className="my-10 px-3 sm:px-5">
+      <h1 className="text-xl sm:text-2xl font-semibold mb-4 text-center">
         Test Your Understanding
       </h1>
 
-      {/* Render the current question */}
-      <div className="border p-5 rounded-lg shadow-md bg-white">
-        <div className="mb-3 flex justify-between">
-          <h3 className="font-semibold">{currentQuestion.question}</h3>
-          <h3 className="text-gray-600">
+      {/* Question Container */}
+      <div className="border p-3 sm:p-5 rounded-lg shadow-md bg-white">
+        <div className="mb-3 flex flex-col sm:flex-row justify-between items-center">
+          <h3 className="font-semibold text-base sm:text-lg">
+            {currentQuestion.question}
+          </h3>
+          <h3 className="text-gray-600 text-sm mt-2 sm:mt-0">
             {category} - {sequence}
           </h3>
         </div>
+
         <ul className="space-y-2">
           {currentQuestion.options.map((option, index) => (
             <li
               key={index}
-              className={`p-3 rounded-lg cursor-pointer ${
+              className={`p-2 sm:p-3 rounded-lg cursor-pointer ${
                 showAnswers
                   ? index === currentQuestion.correct
                     ? "bg-green-300"
@@ -79,14 +82,18 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-between mt-5">
-        <Button onClick={handlePrevious} disabled={currentIndex === 0}>
+      <div className="flex flex-col sm:flex-row justify-between mt-5 space-y-3 sm:space-y-0">
+        <Button
+          onClick={handlePrevious}
+          disabled={currentIndex === 0}
+          className="w-full sm:w-auto"
+        >
           Previous
         </Button>
         <Button
           onClick={handleNext}
           disabled={currentIndex === questions.length - 1}
-          className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="w-full sm:w-auto bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Next
         </Button>

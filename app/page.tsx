@@ -29,15 +29,15 @@ export default function Home() {
           }}
         >
           {/* Container for background overlay */}
-          <div className="bg-black bg-opacity-50 p-10 w-full flex flex-col items-center justify-center">
+          <div className="bg-black bg-opacity-50 p-6 sm:p-10 w-full flex flex-col items-center justify-center">
             {/* Title */}
-            <h1 className="font-bold text-5xl text-center text-white mb-4">
+            <h1 className="font-bold text-3xl sm:text-5xl text-center text-white mb-3">
               <span className="text-cyan-300">Aqu</span>atic and{" "}
               <span className="text-cyan-300">E</span>nvironmental
               <span className="text-cyan-300">S</span>ciences
             </h1>
             {/* Description */}
-            <p className="text-center text-white font-light text-base">
+            <p className="text-center text-white font-light text-sm sm:text-base">
               AquES is a multidisciplinary research group dedicated to
               investigating and resolving environmental challenges.
             </p>
@@ -45,9 +45,9 @@ export default function Home() {
             <Button
               asChild
               variant="ghost"
-              className=" text-white mt-5 text-md underline"
+              className="text-white mt-4 text-sm sm:text-md underline"
             >
-              <Link href="/">
+              <Link href="/about">
                 Learn more about AquES
                 <HiArrowRight className="ml-2" />
               </Link>
@@ -59,21 +59,23 @@ export default function Home() {
       {/* Section 2: Live display of AquaWatch data */}
       <AquaWatchData />
 
-      {/* NEW Section: Video Embed Below AquaWatch Data */}
-      <section className="w-11/12 md:w-2/3 mx-auto my-8 flex flex-col items-center">
-        <iframe
-          src="https://drive.google.com/file/d/1EUfmDnnF_Z5jj9RZdrim60cn6MmOvh2a/preview"
-          width="760"
-          height="480"
-          allow="autoplay"
-          className="border border-gray-300 rounded-lg shadow-lg"
-        />
+      {/* Section 3: Video Embed Below AquaWatch Data */}
+      <section className="w-11/12 md:w-2/3 mx-auto my-8">
+        {/* Responsive container using aspect-video */}
+        <div className="relative w-full aspect-video border border-gray-300 rounded-lg shadow-lg">
+          <iframe
+            src="https://drive.google.com/file/d/1EUfmDnnF_Z5jj9RZdrim60cn6MmOvh2a/preview"
+            allow="autoplay"
+            frameBorder="0"
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
       </section>
 
-      {/* Section 3: Live display of AERONET data */}
+      {/* Section 4: Live display of AERONET data */}
       <section className="w-11/12 md:w-2/3 mx-auto text-center my-8">
-        <h1 className="text-3xl font-semibold mb-4">AERONET</h1>
-        <p className="text-md leading-relaxed mb-4">
+        <h1 className="text-2xl sm:text-3xl font-semibold mb-4">AERONET</h1>
+        <p className="text-sm sm:text-md leading-relaxed mb-4">
           AERONET (Aerosol Robotic Network) is a global, ground-based remote
           sensing network of sun- and sky-scanning radiometers designed to
           provide long-term, continuous, and readily accessible observations of
@@ -81,32 +83,47 @@ export default function Home() {
           NASA, in collaboration with various international agencies and
           research institutions, AERONET focuses on measuring how much sunlight
           is scattered or absorbed by airborne particles such as dust, smoke,
-          pollution, and sea salt. By using standardised instruments and
-          calibration protocols, AERONET ensures consistent data quality,
-          enabling accurate comparisons across geographic regions and over time.
+          pollution, and sea salt.
         </p>
-        <p className="text-lg font-medium mb-6">Live display of AERONET data</p>
-        <div className="flex flex-col md:flex-row justify-center gap-8">
-          <Image
-            src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&aero_water=0&level=1&if_day=0&if_err=0`}
-            width={500}
-            height={500}
-            alt="graph 1"
-            className="border border-gray-300 rounded-lg"
-          />
-          <Image
-            src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&month=${currentMonth}&aero_water=0&level=1&if_day=0&if_err=0`}
-            width={500}
-            height={500}
-            alt="graph 2"
-            className="border border-gray-300 rounded-lg"
-          />
+        <p className="text-base sm:text-lg font-medium mb-6">
+          Live display of AERONET data
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-8">
+          <div className="w-full md:w-[300px] lg:w-[500px]">
+            <Image
+              src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&aero_water=0&level=1&if_day=0&if_err=0`}
+              width={500}
+              height={500}
+              alt="graph 1"
+              className="border border-gray-300 rounded-lg w-full h-auto"
+            />
+          </div>
+          <div className="w-full md:w-[300px] lg:w-[500px]">
+            <Image
+              src={`https://aeronet.gsfc.nasa.gov/cgi-bin/draw_data_chart_v3?site=GSFC&year=${currentYear}&month=${currentMonth}&aero_water=0&level=1&if_day=0&if_err=0`}
+              width={500}
+              height={500}
+              alt="graph 2"
+              className="border border-gray-300 rounded-lg w-full h-auto"
+            />
+          </div>
         </div>
+        <p className="mt-6 text-center text-xs sm:text-sm text-gray-500">
+          AERONET data sourced from{" "}
+          <a
+            href="https://aeronet.gsfc.nasa.gov"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Aerosol Robotic Network (AERONET)
+          </a>
+        </p>
       </section>
 
-      {/* Section 4: Quiz section */}
-      <section className=" bg-slate-50">
-        <div className="w-2/3 mx-auto flex flex-col justify-center">
+      {/* Section 5: Quiz section */}
+      <section className="bg-slate-50 py-8">
+        <div className="w-11/12 sm:w-2/3 mx-auto flex flex-col justify-center">
           <Quiz questions={quizQuestions} />
         </div>
       </section>

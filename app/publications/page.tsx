@@ -69,27 +69,32 @@ export default function PublicationsPage() {
         if (!res.ok) {
           throw new Error(`Error fetching data: ${res.status}`);
         }
-        // Explicitly cast to Promise<Article[]>
         return res.json() as Promise<Article[]>;
       })
       .then((fetchedArticles) => {
-        // Now TypeScript knows fetchedArticles is Article[]
+        console.log("Raw fetched articles:", fetchedArticles);
+        const beforeCount = fetchedArticles.length;
         const uniqueArticles = deduplicateBy(fetchedArticles, "title");
+        console.log("Articles count before deduplication:", beforeCount);
+        console.log(
+          "Articles count after deduplication:",
+          uniqueArticles.length
+        );
         setArticles(uniqueArticles);
       })
       .catch((err) => {
-        console.error(err);
+        console.error("Error fetching articles:", err);
         setError(err.message);
       });
   }, []);
 
   return (
     <section className="flex flex-col items-center my-20">
-      <div className="w-5/6 md:w-3/4 lg:w-3/5">
-        <h1 className="font-bold text-5xl text-center mb-5">
+      <div className="w-11/12 md:w-3/4 lg:w-3/5">
+        <h1 className="font-bold text-4xl md:text-5xl text-center mb-5">
           Research <span className="text-cyan-600">Publications</span>
         </h1>
-        <p className="text-center font-light mb-10">
+        <p className="text-center font-light text-sm md:text-base mb-10">
           Explore the extensive work published by our team.
         </p>
 
@@ -103,22 +108,23 @@ export default function PublicationsPage() {
                   href={profile.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block border rounded-lg p-5 hover:bg-cyan-50 transition"
+                  className="block border rounded-lg p-4 md:p-5 hover:bg-cyan-50 transition"
                 >
-                  <h2 className="text-lg font-semibold">{profile.name}</h2>
-                  <p className="font-light text-sm text-cyan-700 mb-4">
+                  <h2 className="text-base md:text-lg font-semibold">
+                    {profile.name}
+                  </h2>
+                  <p className="font-light text-xs md:text-sm text-cyan-700 mb-2">
                     {profile.specialised.join(" | ")}
                   </p>
-                  <p className="text-sm font-light text-gray-700">
+                  <p className="text-xs md:text-sm font-light text-gray-700">
                     Visit Google Scholar Profile
                   </p>
                 </a>
               ))}
             </div>
           </div>
-        ) : // If there’s no error but publications haven't loaded yet, show "Loading"
-        !articles.length ? (
-          <p>Loading...</p>
+        ) : !articles.length ? (
+          <p className="text-center text-sm md:text-base">Loading...</p>
         ) : (
           // Otherwise, show the scraped publications, with numbering
           articles.map((article, idx) => (
@@ -128,12 +134,11 @@ export default function PublicationsPage() {
                 href={article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-600 hover:underline"
+                className="text-cyan-600 hover:underline text-xs md:text-sm"
               >
                 {article.title}
               </a>
-              {/* Authors, year, etc. */}
-              <div className="text-sm text-gray-600">
+              <div className="text-xs md:text-sm text-gray-600">
                 {article.authors && <div>Authors: {article.authors}</div>}
                 {article.year && <div>Year: {article.year}</div>}
                 {article.cited_by?.value && (

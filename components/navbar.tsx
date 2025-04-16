@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -14,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { truncate } from "@/lib/helper";
+import { HiMenu, HiX } from "react-icons/hi"; // using heroicons for hamburger
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -29,10 +29,13 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   return (
-    <div className="flex justify-center w-full py-5 shadow-2xl bg-white sticky top-0 z-50">
-      <ul className="flex justify-between w-11/12 md:w-3/4 lg:w-2/3 xl:w-[80%]">
-        <li>
+    <nav className="bg-white shadow-2xl sticky top-0 z-50">
+      {/* Main Container */}
+      <div className="flex items-center justify-between w-11/12 lg:w-2/3 xl:w-[80%] mx-auto py-5">
+        <div>
           <a href="/">
             <h1 className="text-2xl font-semibold leading-tight">
               <span className="text-cyan-600">Aqu</span>ES
@@ -41,11 +44,12 @@ export function Navbar() {
               Aquatic &amp; Environmental Sciences
             </p>
           </a>
-        </li>
-        <li>
+        </div>
+
+        {/* Desktop Navigation: visible only at lg and up */}
+        <div className="hidden lg:block">
           <NavigationMenu>
-            <NavigationMenuList>
-              {/* Item 1 */}
+            <NavigationMenuList className="flex space-x-4">
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Research</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -61,9 +65,7 @@ export function Navbar() {
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
                             At AQUES, our research is dedicated to studying
-                            various aspects of the Anthropocene, a defining
-                            period characterized by significant human impact on
-                            the environment.
+                            various aspects of the Anthropocene.
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -82,8 +84,7 @@ export function Navbar() {
                       )}
                     >
                       Investigation of Sources and Distribution | Impact
-                      Assessment on Ecosystems Interactions | Microbial
-                      Bioremediation Solutions
+                      Assessment | Microbial Bioremediation Solutions
                     </ListItem>
                     <ListItem
                       href="/research/environmental-microbiology"
@@ -95,7 +96,7 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              {/* Item 2 */}
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -112,7 +113,7 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              {/* Item 3 */}
+
               <NavigationMenuItem>
                 <Link href="/publications" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -120,7 +121,7 @@ export function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              {/* Item 4 */}
+
               <NavigationMenuItem>
                 <Link href="/tide" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -128,7 +129,7 @@ export function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              {/* Item 5 */}
+
               <NavigationMenuItem>
                 <Link href="/news" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -136,7 +137,7 @@ export function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              {/* Item 6 */}
+
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -146,9 +147,110 @@ export function Navbar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-        </li>
-      </ul>
-    </div>
+        </div>
+
+        {/* Mobile Menu Toggle: visible below lg */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            className="focus:outline-none"
+          >
+            {mobileMenuOpen ? (
+              <HiX className="w-6 h-6" />
+            ) : (
+              <HiMenu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-white shadow-lg">
+          <NavigationMenu>
+            <NavigationMenuList className="flex flex-col space-y-2 p-4">
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Research</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4">
+                    <ListItem
+                      href="/research/greenhouse-gas-emissions"
+                      title="Greenhouse Gas Emissions"
+                    >
+                      Aquatic Emissions, Climate Change, Modelling
+                    </ListItem>
+                    <ListItem
+                      href="/research/microplastics-pollution"
+                      title={truncate(
+                        "Microplastics Pollution and Bioremediation"
+                      )}
+                    >
+                      Sources, Impact, and Remediation
+                    </ListItem>
+                    <ListItem
+                      href="/research/environmental-microbiology"
+                      title="Environmental Microbiology"
+                    >
+                      Microbial Studies and Biogeochemistry
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4">
+                    {components.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/publications" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Publications
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/tide" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Tide
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/news" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    News
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/contact" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Contact
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+      )}
+    </nav>
   );
 }
 

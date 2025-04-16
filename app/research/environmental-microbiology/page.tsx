@@ -1,7 +1,7 @@
 "use client";
-import useEmblaCarousel from "embla-carousel-react";
 import React, { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 
 export default function MicroplasticsPollutionCarousel() {
@@ -14,7 +14,7 @@ export default function MicroplasticsPollutionCarousel() {
     // Fetch images from the API
     const fetchImages = async () => {
       try {
-        const response = await fetch("/api/environmental-microbiology-images");
+        const response = await fetch("/api/microplastics-pollution-images");
         if (!response.ok) {
           throw new Error("Failed to fetch images");
         }
@@ -30,9 +30,11 @@ export default function MicroplasticsPollutionCarousel() {
 
   return (
     <>
+      {/* Carousel Section */}
       <section>
         <div className="embla mx-auto mt-12 w-11/12 md:w-2/3">
-          <div className="embla__viewport h-96 border" ref={emblaRef}>
+          {/* Use a smaller height on mobile (h-72) and increase on md+ (h-96) */}
+          <div className="embla__viewport h-72 md:h-96 border" ref={emblaRef}>
             <div className="embla__container h-full">
               {images.map((image, index) => (
                 <div
@@ -53,45 +55,41 @@ export default function MicroplasticsPollutionCarousel() {
         </div>
       </section>
 
-      {/* Section 2: Research content */}
+      {/* Research Content Section */}
       <section className="w-11/12 md:w-2/3 mx-auto my-10">
-        <div className="text-justify text-lg leading-relaxed space-y-4">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Environmental Microbiology
+        {/* Using responsive text sizes: text-sm on mobile then text-base on md+; headings adjust similarly */}
+        <div className="text-justify text-sm md:text-base leading-relaxed space-y-4">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center">
+            Microplastics Pollution and Bioremediation
           </h2>
           <p>
-            A key research goal of our group is to understand how microorganisms
-            drive processes and control the coupling of essential element cycles
-            in aquatic and terrestrial environments. Microorganisms have
-            experienced billions of years’ worth of evolution and have formed
-            vast and complex communities of bacteria, archaea, protists and
-            fungi. These microscopic creatures play vital roles in marine and
-            terrestrial ecosystem by mediating geochemical cycles, allowing for
-            example for rapid nutrient recycling.
+            Globally, around half of plastic production is used for single-use
+            packaging; roughly 10–14 million tonnes of this ends up in the
+            oceans each year. As plastic degrades, it forms microplastics that
+            can disrupt food webs and stress vital organisms.
           </p>
           <p>
-            The South China Sea is one of the most diverse but also one of the
-            most understudied ecosystems. We are assessing the diversity of
-            microbial life in the South China Sea and try to understand their
-            role in local ecosystems such as coral reefs and rivers (e.g. Sia et
-            al. 2019; Song et al. 2018). There are very few published reports
-            available about coral- associated microbial communities in Sarawak
-            and our group takes a closer look at the bacteria in our local reefs
-            and their potential role in coral defence as well as their response
-            to changing temperatures (e.g. Kuek et al. 2016).
+            Accurate measurement of microplastics in water and sediments is
+            challenging. In collaboration with partners, we have developed a
+            fast and cost-effective method to map microplastic levels and their
+            distribution across various ecosystems.
           </p>
           <p>
-            The interaction between various microbes, often competing for space,
-            is another area often neglected in ecological studies and the vast
-            biodiversity of Sarawak offers intriguing research opportunities in
-            this area. Endophytic fungi live their whole life in plants and have
-            been shown to play important roles for their survival, especially by
-            producing antimicrobial compounds. Our group has been collecting
-            samples in remote and undisturbed environments such as the Heart of
-            Borneo and Kuching Wetlands National Park. Most of our work focuses
-            on the potential use of these highly specialised fungi for
-            bioremediation of heavy metals and plastic components (e.g Onn et
-            al. 2016; Lii et al. 2017; Wong et al. 2018).
+            We utilize Nile red staining to quantify the dispersion of
+            microplastics in Sarawak, while FTIR analysis helps identify the
+            types of polymers present. Our focus lies on coastal ecosystems and
+            the communities dependent on local freshwater resources.
+          </p>
+          <p>
+            Furthermore, our research investigates the interaction between
+            microplastics and microbial communities, including the influence on
+            gene expression in plastisphere ecosystems.
+          </p>
+          <p>
+            We also examine microplastic uptake into the food chain and explore
+            microbial solutions for biodegradation. This work includes isolating
+            and characterizing bacteria and endophytic fungi capable of
+            degrading various plastic polymers.
           </p>
         </div>
       </section>

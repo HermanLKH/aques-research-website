@@ -9,7 +9,6 @@ import { EmailFormState } from "@/lib/types";
 
 // ContactUs Component
 export default function ContactUs() {
-  // Initialize form state and validation
   const initialState: EmailFormState = {
     full_name: "",
     email_id: "",
@@ -26,11 +25,8 @@ export default function ContactUs() {
   // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Validate form
     if (!validateForm()) return;
 
-    // Construct mailto link with multiple recipients
     const mailtoLink = `mailto:${recipients.join(
       ","
     )}?subject=${encodeURIComponent(
@@ -39,19 +35,18 @@ export default function ContactUs() {
       `To AquES,\n${formData.message}\n\nfrom ${formData.full_name}\n${formData.email_id}\n${formData.phone_num}`
     )}`;
 
-    // Open the mailto link in the user's default email client
     window.location.href = mailtoLink;
   };
 
   return (
     <>
-      {/* Section 1: Title & description */}
-      <section className="flex flex-col items-center my-20">
-        <div className="w-10/12 md:w-3/4 lg:w-3/5">
-          <h1 className="font-bold text-5xl text-center">
+      {/* Section 1: Title & Description */}
+      <section className="flex flex-col items-center my-12 sm:my-16 px-4">
+        <div className="w-11/12 md:w-3/4 lg:w-3/5">
+          <h1 className="font-bold text-4xl sm:text-5xl text-center">
             Contact <span className="text-cyan-600">AquES</span>
           </h1>
-          <p className="text-center font-light mt-2">
+          <p className="text-center font-light mt-2 text-sm sm:text-base">
             Reach out to us for detailed information. Your feedback is
             invaluable in helping us enhance our research and outreach efforts.
           </p>
@@ -59,18 +54,19 @@ export default function ContactUs() {
       </section>
 
       {/* Section 2: Contact Form */}
-      <section className="bg-slate-50 py-10 flex justify-center">
-        <div className="w-full lg:w-4/5 flex flex-col items-center">
-          {/* subheader */}
-          <h2 className="font-semibold text-3xl text-center mb-5">
+      <section className="bg-slate-50 py-8 sm:py-10 flex justify-center px-4">
+        <div className="w-full sm:w-3/4 lg:w-4/5 flex flex-col items-center">
+          {/* Subheader */}
+          <h2 className="font-semibold text-2xl sm:text-3xl text-center mb-5">
             Send us an Email
           </h2>
-
           {/* Form */}
-          <form className="w-3/4" onSubmit={handleSubmit}>
+          <form className="w-full" onSubmit={handleSubmit}>
             {/* Full name input */}
             <div className="mb-4">
-              <Label htmlFor="full_name">Full Name</Label>
+              <Label htmlFor="full_name" className="text-sm sm:text-base">
+                Full Name
+              </Label>
               <Input
                 type="text"
                 id="full_name"
@@ -81,14 +77,18 @@ export default function ContactUs() {
                 className={errors.fullName ? "border-red-500" : ""}
               />
               {errors.fullName && (
-                <p className="text-red-500 text-sm">{errors.fullName}</p>
+                <p className="text-red-500 text-xs sm:text-sm">
+                  {errors.fullName}
+                </p>
               )}
             </div>
 
-            {/* Email input */}
-            <div className="flex mb-4">
-              <div className="w-1/2 pr-2">
-                <Label htmlFor="email_id">Email</Label>
+            {/* Email and Phone Number */}
+            <div className="flex flex-col sm:flex-row mb-4">
+              <div className="w-full sm:w-1/2 sm:pr-2 mb-4 sm:mb-0">
+                <Label htmlFor="email_id" className="text-sm sm:text-base">
+                  Email
+                </Label>
                 <Input
                   type="email"
                   id="email_id"
@@ -99,13 +99,16 @@ export default function ContactUs() {
                   className={errors.email ? "border-red-500" : ""}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email}</p>
+                  <p className="text-red-500 text-xs sm:text-sm">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
-              {/* Phone number input */}
-              <div className="w-1/2 pl-2">
-                <Label htmlFor="phone_num">Phone Number</Label>
+              <div className="w-full sm:w-1/2 sm:pl-2">
+                <Label htmlFor="phone_num" className="text-sm sm:text-base">
+                  Phone Number
+                </Label>
                 <Input
                   type="text"
                   id="phone_num"
@@ -116,14 +119,18 @@ export default function ContactUs() {
                   className={errors.phoneNum ? "border-red-500" : ""}
                 />
                 {errors.phoneNum && (
-                  <p className="text-red-500 text-sm">{errors.phoneNum}</p>
+                  <p className="text-red-500 text-xs sm:text-sm">
+                    {errors.phoneNum}
+                  </p>
                 )}
               </div>
             </div>
 
-            {/* Message textarea */}
+            {/* Message Textarea */}
             <div className="mb-6">
-              <Label htmlFor="message">Your message</Label>
+              <Label htmlFor="message" className="text-sm sm:text-base">
+                Your message
+              </Label>
               <Textarea
                 id="message"
                 name="message"
@@ -133,15 +140,17 @@ export default function ContactUs() {
                 className={errors.message ? "border-red-500" : ""}
               />
               {errors.message && (
-                <p className="text-red-500 text-sm">{errors.message}</p>
+                <p className="text-red-500 text-xs sm:text-sm">
+                  {errors.message}
+                </p>
               )}
             </div>
 
-            {/* Submit button */}
+            {/* Submit Button */}
             <div className="flex items-center justify-center">
               <Button
                 type="submit"
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm sm:text-base"
               >
                 Send
               </Button>

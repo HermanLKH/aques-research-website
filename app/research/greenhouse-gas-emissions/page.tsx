@@ -32,7 +32,8 @@ export default function MicroplasticsPollutionCarousel() {
     <>
       <section>
         <div className="embla mx-auto mt-12 w-11/12 md:w-2/3">
-          <div className="embla__viewport h-96 border" ref={emblaRef}>
+          {/* Use a smaller height on mobile (h-72) and increase on md+ (h-96) */}
+          <div className="embla__viewport h-72 md:h-96 border" ref={emblaRef}>
             <div className="embla__container h-full">
               {images.map((image, index) => (
                 <div
@@ -55,8 +56,9 @@ export default function MicroplasticsPollutionCarousel() {
 
       {/* Section 2: Research content */}
       <section className="w-11/12 md:w-2/3 mx-auto my-10">
-        <div className="text-justify text-lg leading-relaxed space-y-4">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
+        {/* Using responsive text sizes: text-sm on mobile then text-base on md+; headings adjust similarly */}
+        <div className="text-justify text-sm md:text-base leading-relaxed space-y-4">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center">
             Greenhouse Gas Emissions
           </h2>
           <p>

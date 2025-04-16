@@ -8,60 +8,77 @@ async function fetchAllArticlesForAuthor(authorId: string, apiKey: string) {
   let hasNext = true;
 
   while (hasNext) {
-    // Build the query URL with the current 'start' offset
     const serpApiUrl = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${authorId}&start=${currentStart}&api_key=${apiKey}`;
+    console.log(`Fetching for author ${authorId} at start=${currentStart}: ${serpApiUrl}`);
 
     const response = await fetch(serpApiUrl);
     if (!response.ok) {
       throw new Error(`SerpApi request failed for ${authorId}: ${response.statusText}`);
     }
-
     const data = await response.json();
+    console.log(`Data received for author ${authorId}:`, data);
 
     const articles = data.articles || [];
+    console.log(`Fetched ${articles.length} articles for author ${authorId} from start index ${currentStart}`);
     allArticles.push(...articles);
 
-    // Check if there's a next page
     const nextLink = data.serpapi_pagination?.next_link;
+    console.log(`Pagination next_link for author ${authorId}:`, nextLink);
     if (nextLink) {
-      // Increase 'currentStart' by however many articles we just got
       currentStart += articles.length;
     } else {
-      // No next link => no more pages
       hasNext = false;
     }
   }
-
   return allArticles;
 }
 
 export async function GET(req: NextRequest) {
   try {
-    // Your 4 SerpApi Author IDs
     const authorIds = [
       "taXOvK8AAAAJ", 
       "q2Sg9akAAAAJ", 
       "OgAndckAAAAJ",
       "gUqutgMAAAAJ"
     ];
-
     const apiKey = process.env.SERPAPI_API_KEY || "";
     let allCombinedArticles: any[] = [];
 
-    // Fetch *all* pages for each author, then combine
     for (const authorId of authorIds) {
-      const allArticlesForOneAuthor = await fetchAllArticlesForAuthor(authorId, apiKey);
-      allCombinedArticles.push(...allArticlesForOneAuthor);
+      const articlesForOneAuthor = await fetchAllArticlesForAuthor(authorId, apiKey);
+      console.log(`Total articles fetched for author ${authorId}:`, articlesForOneAuthor.length);
+      allCombinedArticles.push(...articlesForOneAuthor);
     }
 
-    // (Optional) Sort combined articles by year descending
-    allCombinedArticles.sort((a, b) => {
-      const yearA = parseInt(a.year ?? "0", 10);
-      const yearB = parseInt(b.year ?? "0", 10);
-      return yearB - yearA;
+    console.log("Combined articles count before processing:", allCombinedArticles.length);
+
+    // Process articles: if year is empty, assign a numeric default of -1 for sorting purposes and display as "NA"
+    const processedArticles = allCombinedArticles.map((article) => {
+      // Check if "year" is empty or consists solely of whitespace
+      if (!article.year || article.year.trim() === "") {
+        return {
+          ...article,
+          sortYear: -1, // Use a numeric value that will sort at the bottom
+          year: "NA",   // Change empty string to "NA" for display
+        };
+      }
+      // Otherwise, parse the year for numeric sorting
+      return {
+        ...article,
+        sortYear: parseInt(article.year, 10)
+      };
     });
 
-    return NextResponse.json(allCombinedArticles, { status: 200 });
+    // Sort descending by sortYear so that higher years come first and any articles with -1 are at the end
+    processedArticles.sort((a, b) => b.sortYear - a.sortYear);
+
+    // (Optional) Cleanup: remove the temporary sortYear field if you don't want it in the final output
+    processedArticles.forEach((article) => {
+      delete article.sortYear;
+    });
+
+    console.log("Sending processed and sorted articles.");
+    return NextResponse.json(processedArticles, { status: 200 });
   } catch (error: any) {
     console.error("SerpApi Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });

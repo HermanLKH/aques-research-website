@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
   Filler,
-  ChartOptions, // For the area fill
+  ChartOptions,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -23,7 +23,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Filler // Required for area graphs
+  Filler
 );
 
 interface TideDay {
@@ -60,10 +60,10 @@ export default function TideChart() {
   }, []);
 
   if (loading) {
-    return <div className="p-4">Loading tide data...</div>;
+    return <div className="p-4 text-sm">Loading tide data...</div>;
   }
 
-  // --- Build chart points ---
+  // Build chart points from tide data
   const parseHeight = (height: string) =>
     isNaN(parseFloat(height)) ? null : parseFloat(height);
 
@@ -85,15 +85,12 @@ export default function TideChart() {
     });
   });
 
-  // Customized labels: Only show full day label for every 4th point
-  const labels = points.map((point, index) => {
-    if (index % 4 !== 0) {
-      return "";
-    } else {
-      return point.label.split(" ")[0] + " " + point.label.split(" ")[1];
-    }
-  });
-
+  // Only show full day label every 4th point
+  const labels = points.map((point, index) =>
+    index % 4 !== 0
+      ? ""
+      : point.label.split(" ")[0] + " " + point.label.split(" ")[1]
+  );
   const dataValues = points.map((p) => p.height);
 
   const chartData = {
@@ -102,22 +99,24 @@ export default function TideChart() {
       {
         label: "Tide Height (m)",
         data: dataValues,
-        fill: { value: -1 }, // Fill down to -1
-        borderColor: "rgb(65, 143, 185, 1)", // Slightly lighter and more cyan
-        backgroundColor: "rgb(81, 159, 197, 0.15)", // Light Blue with 40% transparency
-        tension: 0.4, // Smooth curve
+        fill: { value: -1 },
+        borderColor: "rgba(65, 143, 185, 1)",
+        backgroundColor: "rgba(81, 159, 197, 0.15)",
+        tension: 0.4,
       },
     ],
   };
 
+  // Chart options with responsive behavior (Chart.js handles responsiveness)
   const options: ChartOptions<"line"> = {
     responsive: true,
     maintainAspectRatio: true,
     plugins: {
-      legend: { position: "top" as const },
+      legend: { position: "top" },
       title: {
         display: true,
         text: "Tide Chart and Curves for Santubong",
+        // The font size is fixed here, but Chart.js's responsiveness will adjust the chart area.
         font: { size: 36 },
       },
       tooltip: {
@@ -141,11 +140,9 @@ export default function TideChart() {
         min: -1,
         max: 4.0,
         ticks: { stepSize: 0.5 },
-        title: { display: false },
-        grid: { color: "#e5e7eb" }, // Light grid lines
+        grid: { color: "#e5e7eb" },
       },
       x: {
-        title: { display: false },
         grid: { color: "#e5e7eb" },
       },
     },
@@ -156,10 +153,10 @@ export default function TideChart() {
   };
 
   return (
-    <div className="w-full h-auto max-w-7xl mx-auto p-6 bg-white rounded-lg shadow">
+    <div className="w-full h-auto max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow">
       <Line data={chartData} options={options} />
 
-      <footer className="mt-8 text-center text-sm text-gray-500">
+      <footer className="mt-8 text-center text-xs sm:text-sm text-gray-500">
         Tide data sourced from{" "}
         <a
           href="https://tidechecker.com/malaysia/sarawak/santubong/"
