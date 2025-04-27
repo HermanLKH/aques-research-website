@@ -55,71 +55,73 @@ export default function OurTeam() {
       </section>
 
       {/* Section 4: Research Students and Alumni */}
-      <section className="bg-slate-50 py-12 flex justify-center px-4">
-        <Tabs defaultValue="researchstudents" className="w-full max-w-lg">
-          <TabsList className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mb-6">
-            <TabsTrigger
-              value="researchstudents"
-              className="font-semibold text-base sm:text-lg w-full sm:w-auto px-4 py-2"
-            >
-              Research Students
-            </TabsTrigger>
-            <TabsTrigger
-              value="alumni"
-              className="font-semibold text-base sm:text-lg w-full sm:w-auto px-4 py-2"
-            >
-              Alumni
-            </TabsTrigger>
-          </TabsList>
+      <section className="bg-slate-50 py-12 px-4">
+        <div className="max-w-6xl mx-auto w-full">
+          <Tabs defaultValue="researchstudents" className="w-full">
+            <TabsList className="flex justify-center space-x-4 mb-6">
+              <TabsTrigger
+                value="researchstudents"
+                className="font-semibold text-base sm:text-lg px-4 py-2 whitespace-nowrap"
+              >
+                Research Students
+              </TabsTrigger>
+              <TabsTrigger
+                value="alumni"
+                className="font-semibold text-base sm:text-lg px-4 py-2 whitespace-nowrap"
+              >
+                Alumni
+              </TabsTrigger>
+            </TabsList>
 
-          {/* Research Students */}
-          <TabsContent value="researchstudents">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {rStudents.map((rStudent) => (
-                <li key={rStudent.name}>
-                  <Button
-                    asChild
-                    variant="link"
-                    className="text-sm sm:text-base"
-                  >
-                    <Link href={rStudent?.contact?.linkedin || ""}>
-                      {rStudent.name}
-                    </Link>
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </TabsContent>
-
-          {/* Alumni */}
-          <TabsContent value="alumni">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {alumni.map((alumnus) => (
-                <li key={alumnus.name}>
-                  {alumnus?.contact?.linkedin ? (
+            {/* Research Students */}
+            <TabsContent value="researchstudents" className="overflow-x-auto">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {rStudents.map((rStudent) => (
+                  <li key={rStudent.name}>
                     <Button
                       asChild
                       variant="link"
-                      className="text-sm sm:text-base"
+                      className="text-sm sm:text-base justify-start"
                     >
-                      <Link href={alumnus.contact.linkedin}>
-                        {alumnus.name}
+                      <Link href={rStudent?.contact?.linkedin || "#"}>
+                        {rStudent.name}
                       </Link>
                     </Button>
-                  ) : (
-                    <Button
-                      asChild
-                      variant="ghost"
-                      className="text-sm sm:text-base"
-                    >
-                      <p className="cursor-default">{alumnus.name}</p>
-                    </Button>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </TabsContent>
-        </Tabs>
+                  </li>
+                ))}
+              </ul>
+            </TabsContent>
+
+            {/* Alumni */}
+            <TabsContent value="alumni" className="overflow-x-auto">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {alumni.map((alumnus) => (
+                  <li key={alumnus.name}>
+                    {alumnus?.contact?.linkedin ? (
+                      <Button
+                        asChild
+                        variant="link"
+                        className="text-sm sm:text-base justify-start"
+                      >
+                        <Link href={alumnus.contact.linkedin}>
+                          {alumnus.name}
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="text-sm sm:text-base justify-start"
+                      >
+                        <span className="cursor-default">{alumnus.name}</span>
+                      </Button>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </TabsContent>
+          </Tabs>
+        </div>
       </section>
     </>
   );
