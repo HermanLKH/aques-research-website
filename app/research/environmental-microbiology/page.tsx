@@ -60,7 +60,7 @@ export default function MicroplasticsPollutionCarousel() {
         {/* Using responsive text sizes: text-sm on mobile then text-base on md+; headings adjust similarly */}
         <div className="text-justify text-sm md:text-base leading-relaxed space-y-4">
           <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center">
-            Microplastics Pollution and Bioremediation
+            Environmental Microbiology
           </h2>
           <p>
             Globally, around half of plastic production is used for single-use
